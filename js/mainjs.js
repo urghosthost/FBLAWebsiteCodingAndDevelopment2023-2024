@@ -1,3 +1,4 @@
+// Function for Button hiding and unhiding on mobile navbar
 function myFunction() {
     var x = document.getElementById("myLinks");
     if (x.style.visibility === "visible") {
@@ -12,19 +13,8 @@ function myFunction() {
         x.style.transition = "block 0.5s visibility 0s, opacity 0.5s linear"
     }
 }
-function formFunction() {
-    var input = document.getElementById("formSubButton");
-    var nameInput = document.getElementById("name");
-    var emailInput = document.getElementById("email");
-    input.value = "SUBMITTED";
-    nameInput.value = "";
-    emailInput.value = "";
-}
-function hoverImage(imageID, imageLocation) {
-    document.getElementById(imageID).src = imageLocation;
-    document.getElementById(imageID).style.webkitTransition = " all .3s ease-in-out";
-    document.getElementById(imageID).style.transition = " all .3s ease-in-out";
-}
+
+// Function for text typing effect on index page
 var i = 0;
 var txt = "Want to join the Axcelmark team?";
 var speed = 50; /* The speed/duration of the effect in milliseconds */
@@ -35,6 +25,8 @@ function typeWriter() {
         setTimeout(typeWriter, speed);
     }
 }
+
+// Function for sending to contact page after submitting application
 function formFunction() {
-    setTimeout(()=>{document.location = 'index.html'}, 5000);
+    setTimeout(()=>{document.location = 'contact.html'}, 5000);
 }
