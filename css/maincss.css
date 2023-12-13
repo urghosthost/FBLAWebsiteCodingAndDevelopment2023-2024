@@ -10,6 +10,7 @@
 html {
     scroll-behavior: smooth;
   }
+/*Creates main basis for body coloring */
 body{
     font-family: 'Noto Sans', sans-serif;
     border: gray none 4px;
@@ -17,7 +18,7 @@ body{
     background-color:  #f2f1f0;
 }
 
-
+/*Makes sticky header */
 header {
     z-index: 10000;
     position: sticky;
@@ -25,6 +26,7 @@ header {
     top: 0px;
     width: 100%;
 }
+/*Main CSS for navbar bar */
 .navbar ul {
     list-style-type: none;
     margin: 0;
@@ -63,25 +65,27 @@ header {
     background-color: black;
     transition: 0.5s;
 }
+
+/*Main CSS for navbar buttons when not active */
 .navbar li a:hover:not(.active) {
     background-color:black;
     transition: background-color 0.5s;
 }
-.navbar li #navbutton.active {
-    color: white;
-}
+/*Main CSS for navbar buttons when active */
 .navbar li a.active {
     color: white;
     background-color: #FF0000;
 }
+/*Main CSS for navbar buttons when hover and active */
 .navbar li a.active:hover{
     background-color: #B50202;
     transition: background-color 0.5s;
 }
+/*CSS for navbar buttons for alignment*/
 .navbar li a.navbutton {
     float: right;
 }
-
+/*Main CSS Mobile Navbar CSS*/
 .mobilenav {
     overflow: hidden;
     display: none;
@@ -95,6 +99,7 @@ header {
     top: 0px;
     width: 100%;
 }
+/*Main CSS Mobile Navbar CSS for buttons to be hidden on default*/
 .mobilenav #myLinks {
     display: none;
     visibility: hidden;
@@ -106,7 +111,7 @@ header {
     overflow: hidden;
 }
 
-
+/*Main CSS Mobile Navbar CSS for buttons*/
 .mobilenav a {
     padding: 14px 16px;
     text-decoration: none;
@@ -115,9 +120,11 @@ header {
     background-color: #242322;
     transition: background-color 0.5s;
 }
+/*Main CSS Mobile Navbar CSS for logo*/
 #mobileimage {
     text-align: left;
 }
+/*Main CSS Mobile Navbar buttons when hovered*/
 .mobilenav a:hover {
     background: #242322;
     color: white;
@@ -126,9 +133,11 @@ header {
     transition: background-color 0.5s;
 
 }
+/*Margin for Current Job Openings Section*/
 .indextable {
     margin-top: 45px;
 }
+/*Main CSS Mobile Navbar icon (tripple lines)*/
 .mobilenav a.icon {
     display: block;
     position:absolute;
@@ -138,19 +147,19 @@ header {
     color: white;
     transition: background-color 0.5s;
 }
+/*Main CSS Mobile Navbar buttons when active*/
 .mobilenav .active{
     background-color: #FF0000;
     color: black;
     transition: background-color 0.5s;
 }
+/*Main CSS Mobile Navbar buttons when active and hovered*/
 .mobilenav .active:hover{
     background-color: #B50202;
     transition: background-color 0.5s;
     
 }
-.productTable {
-    border-spacing: 50px;
-}
+/*Desktop CSS for .section1 class*/
 .section1 {
     position: relative;
     text-align: center;
@@ -160,12 +169,11 @@ header {
     border: gray none 4px;
     border: none;
 }
+/*Desktop CSS for .section1 class images*/
 .section1img{
     width:100%;
 }
-.section2{
-    margin: 0;
-}
+/*Main CSS for text centered section*/
 .textcentered {
     border: none;
     position: absolute;
@@ -176,19 +184,21 @@ header {
     transform: translate(-50%, -50%);
     border: gray none 4px;
 }
+/*Main CSS for text centered section background*/
 .section1text {
     border: none;
     background: url('images/wideshirtscropped.jpg');
 }
-
+/*Main CSS for section 2 */
 .section2 {
     padding: 10px 0px 10px 0px;
     width: 100%;
-    
+    margin: 0;
     text-align:left;
     align-items: center;
     border: gray none 4px;
 }
+/*Main CSS for section 2 text*/
 .section2text{
     font-size:32px;
     text-align: left;
@@ -196,46 +206,18 @@ header {
     margin-left: 6.67%;
     margin-right:6.67%
 }
+/*Main CSS for section 2 text images*/
 .section2image {
     float: left;
     width: 40%;
     margin-right:6.67%
 }
+/*Main CSS for section images*/
 .sectionimg{
     margin-top: 0px;
-    width:450px;
-    
-}
-.sticky + .content {
-    padding-top: 60px;
-  }
-
-.asideProducts{
-    width: 33%;
-    float: left;
-    background-color: gray;
-}
-.form{
-    background-color:#214341;
-    text-align:center;
-    margin-top:0px;
-    border: 1px solid #e0cd69;
-    color: white;
-    font-family: 'Noto Sans', sans-serif;
-    border: gray none 4px;
-    border-radius: 0px;
-}
-    
-.formitem {
-    text-align: center;
-    
-    margin-left:auto;
-    margin-right: auto;
-}
-.formlabel label{
-    text-align: left;
-    float: left;
-}
+    width:450px; 
+}   
+/*Main CSS for section images*/
 .categorybuttonimg {
     width:175px;
     padding: 35px;
