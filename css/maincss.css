@@ -838,7 +838,7 @@ button.callToActionButton:hover {
     }
 
     input[type=text], select, textarea {
-        width:90%;
+        width:95%;
     }
     .formitem {
         padding: 10px 0px 0px 0px; 
