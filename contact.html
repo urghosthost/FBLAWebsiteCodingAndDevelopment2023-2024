@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Axcelmark Applications</title>
+<link rel="stylesheet" href="css/maincss.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/962ad0f493.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar" id="navbar">
+            <ul>
+                <li style="float: left;"><a href="index.html" id="navlogo" ><img src="images/AxcelmarkLogo.png" style="height: 65px;" /></a></li>
+                <li style="float: right;"><a href="contact.html" class="active" id="navbutton"><strong>HELP</strong></a></li>
+                <li style="float: right;"><a href="application.html" id="navbutton" ><strong>APPLICATION</strong></a></li>
+                <li style="float: right;"><a href="listings.html"  id="navbutton" ><strong>LISTINGS</strong></a></li>
+                <li style="float: right;"><a href="index.html"  id="navbutton" ><strong>HOME</strong></a></li>
+                
+                
+            </ul>
+         
+        </div>
+        <div class="mobilenav">
+            <a href="index.html" id="mobileimage"><img id="mobileimage" src="images/AxcelmarkLogo.png" style="height:50px; " /></a>
+            
+                
+            <div id="myLinks">
+                <a href="index.html"  style="color: white; "><strong>HOME</strong></a>
+                <a href="listings.html"   style="color:white;"><strong>LISTINGS</strong></a>
+                <a href="application.html"  style="color:white;"><strong>APPLICATION</strong></a>
+                <a href="contact.html" class="active" style="color: white;"><strong>HELP</strong></a>
+            </div>
+            <a href="javascript:void(0);" class="icon"onclick="myFunction()" >
+                <i class="fa fa-bars" style="width:50px; height: 37px;margin-top: 35%;color:white;"></i>
+            </a>
+    
+        </div>
+    </header>
+    <div class="applyDescription" style="margin-top: 25px; margin-bottom: 25px;">
+        <h1>HELP</h1>
+    
+    </div>
+    <div class="applyDescription" style="width: 80%;margin-top: 25px; margin-bottom: 25px; margin: auto auto; background-color: #FF9900;">
+        <h1>CONTACT INFORMATION</h1>
+        <p style="font-size: 24px; "><strong>If you have questions regarding your application, feel free to contact us!</strong> <br><br>
+            <div style="text-align: center; margin-left: 10px;" id="contactfonts">
+                <p>Address: 9751 98th St N, Seminole, FL 33777 </p><br>
+                <p>Phone: 727-601-2423 </p><br>
+                <p>Email: cstewart@axcelmark.com </p><br>
+            </div>
+    
+    </div>
+    
+    <div class="accordion-body">
+        <div class="accordion">
+          <h1 class="sectionheader">Frequently Asked Questions</h1>
+          <hr>
+          <div class="acccontainer">
+            <div class="acclabel">How long will it take to hear back about my application?</div>
+            <div class="acccontent"> As our company is not large and we may have many canadites to consider, it may take up to two weeks to hear a response. Please be patient as we fully consider all our options.</div>
+            <hr>
+            </div>
+            <div class="acccontainer">
+                <div class="acclabel">What are the next steps?</div>
+                <div class="acccontent">If you hear back from us and we say that we want to further talk about a position, we will move forward with a interview, which then we will fully decide whether you are right for the company.</div>
+            </div>
+            <hr>
+            <div class="acccontainer">
+                <div class="acclabel">What kind of healthcare and saving options are offered through this job?</div>
+                <div class="acccontent">Health insurance and a 401(k) savings plan is offered!</div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div style="background-image: url('images/clothingBackground.png'); background-repeat: no-repeat;background-attachment: fixed;background-size: cover; padding:20px 20px;">
+        <div class= "signup" style="padding-top: 15px; padding-bottom: 15px;margin-top: 25px; margin-bottom:25px;">
+            <button id="aboutButton" style="text-align:center; margin-left:auto  ;margin-right: auto;  font-size: 28px;" class="callToActionButton" onclick="document.location='application.html'" style="display:inline-block;">CLICK HERE TO APPLY</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footerrow">
+            <h3>CONNECT WITH US</h3>
+        </div>
+        <div class="footerrow">
+            <ul class="social-links">
+                <li><a href="mailto:cstewart@axcelmark.com"><i class="fa-regular fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="footerrow">
+            <p>
+              <a id="copyrightLink"href="copyright.html">&copy;Copyright Axcelmark Official. All rights reserved.</a>
+            </p>
+        </div>
+    </footer>
+    <script src="js/accordian.js" type="text/javascript"></script>
+    <script src="js/mainjs.js" type="text/javascript"></script>
+</body>
+
+</html>

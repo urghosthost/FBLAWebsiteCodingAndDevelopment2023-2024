@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Axcelmark Applications</title>
+<link rel="stylesheet" href="css/maincss.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/962ad0f493.js" crossorigin="anonymous"></script>
+</head>
+<body>  
+    <header>
+        <!-- Desktop navigation bar -->
+        <div class="navbar" id="navbar">
+            <ul>
+                <li style="float: left;"><a href="index.html" id="navlogo" ><img src="images/AxcelmarkLogo.png" style="height: 65px;" /></a></li>
+                <li style="float: right;" ><a href="contact.html" id="navbutton" ><strong>HELP</strong></a></li>
+                <li style="float: right;"><a href="application.html" id="navbutton" ><strong>APPLICATION</strong></a></li>
+                <li style="float: right;"><a href="listings.html" id="navbutton" class="active"><strong>LISTINGS</strong></a></li>
+                
+            
+                <li style="float: right;"><a href="index.html"  id="navbutton" ><strong>HOME</strong></a></li>
+                
+                
+            </ul>
+         
+        </div>
+        <!-- Mobile navigation bar-->
+        <div class="mobilenav">
+            <a href="index.html" id="mobileimage"><img id="mobileimage" src="images/AxcelmarkLogo.png" style="height:50px; " /></a>
+            
+                
+            <div id="myLinks">
+                <a href="index.html" style="color: white; "><strong>HOME</strong></a>
+                <a href="listings.html" class="active" style="color:white;"><strong>LISTINGS</strong></a>
+                <a href="application.html"  style="color:white;"><strong>APPLICATION</strong></a>
+                <a href="contact.html" style="color: white;"><strong>HELP</strong></a>
+            </div>
+            <a href="javascript:void(0);" class="icon"onclick="myFunction()" >
+                <i class="fa fa-bars" style="width:50px; height: 37px;margin-top: 35%;color:white;"></i>
+            </a>
+    
+        </div>
+    </header>
+
+    <div id="popup">
+        <button id=”close” onclick="closePopUp()">&times;</button>
+        <h2>Automatic Pop-Up</h2>
+    <p>Lorem, ipsum … dignissimos?</p>
+    <a href="products.html">Let’s Go</a>
+    </div>
+    
+    <!--Title-->
+    <div class="applyDescription" style="margin-top: 25px;">
+        <h1>LISTINGS</h1>
+    
+    </div>
+    <!--Customer Service Section-->
+    <div class="aboutsection" id="customerservicesection">
+        <table cellspacing="0" style="margin-left: auto; margin-right:auto;">
+            <tr>
+                <td id="sectionimg"class="sectionbox" ><img class="sectionimg" id="whoAreWeImg" src="images/customerserviceImage.jpg" style="border:black none 1px; " /></td>
+                <td class="sectionbox" id="card"style="text-align:center;">
+
+                    <h1 class="sectionheader">CUSTOMER SERVICE</h1>
+                    <p class="sectiontext" >Do you want to be a Customer Service Representative for a dynamic and vibrant custom T-shirt printing company? In this role, you will be responsible for handling orders, answering phone calls, addressing inquiries, and ensuring seamless communication between the company and our clients. We are looking for individuals with excellent communication skills to become a part of our creative team. At Axcelmark, we offer a starting salary of $13.50 per hour, along with opportunities for growth, a supportive work culture, and other exciting perks. Don't miss out on this chance to be a part of a growing company in a thriving industry!
+                    
+    
+                    <button id="aboutButton" style="float: left;" class="callToActionButton" onclick="document.location='application.html'" style="display:inline-block;">CLICK HERE TO APPLY!</button>
+                    
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <!--Floor Manager Section for Desktop-->
+    <div class="howtosection" id="floormanagersection">
+        <table cellspacing="0" style="margin-left: auto; margin-right:auto;" id="desktoplayoutsection">
+            <tr>
+                
+                <td class="sectionbox" id="card"style="text-align:center; padding-top: 10px; padding-bottom: 10px">
+                    <h1 class="sectionheader" style="color:black">FLOOR MANAGER</h1>
+                    <p  class="sectiontext" style="color:black" > Do you have experience in management and are looking for your next challenge? Axcelmark, a custom T-shirt printing company, is hiring a Floor Manager to become an integral part of our team. In this role, you will oversee production and ensure quality standards are met, while also driving a positive team environment. Your leadership will enhance efficiency, create a tight-knit community, and maintain a high level of customer satisfaction. At AxcelMark, we offer a starting salary of $16 per hour, opportunities for growth, and a supportive work culture. Don't miss out on this chance to take the next step in your career and become a part of a thriving industry with Axcelmark!</p>
+                    <button style="float: left; "class="callToActionButton" onclick="document.location='application.html'" style="display:inline-block">CLICK HERE TO APPLY!</button>
+                </td>
+                <td id="sectionimg" class="sectionbox"><img src="images/managerImage.png" class="sectionimg" id="tutorialsHomeImg" style="border:black none 1px;" /></td>
+                
+            </tr>
+        </table>
+    </div>
+    <!--Floor Manager Section for Mobile-->
+    <div class="howtosection" id="floormanagersection">
+        <table cellspacing="0" style="margin-left: auto; margin-right:auto;"id="mobilelayoutsection">
+            <tr>
+                <td id="sectionimg" class="sectionbox"><img src="images/managerImage.png" class="sectionimg" id="tutorialsHomeImg" style="border:black none 1px;" /></td>
+                <td class="sectionbox" id="card"style="text-align:center; padding-top: 10px; padding-bottom: 10px">
+                    <h1 class="sectionheader" style="color:black" >FLOOR MANAGER</h1>
+                    <p  class="sectiontext" style="color:black" > Do you have experience in management and are looking for your next challenge? Axcelmark, a custom T-shirt printing company, is hiring a Floor Manager to become an integral part of our team. In this role, you will oversee production and ensure quality standards are met, while also driving a positive team environment. Your leadership will enhance efficiency, create a tight-knit community, and maintain a high level of customer satisfaction. At AxcelMark, we offer a starting salary of $16 per hour, opportunities for growth, and a supportive work culture. Don't miss out on this chance to take the next step in your career and become a part of a thriving industry with Axcelmark!
+                    </p>
+                    <button style="float: left;"class="callToActionButton" onclick="document.location='application.html'" style="display:inline-block; ">CLICK HERE TO APPLY!</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--Screen Printer Section-->
+    <div class="aboutsection" style="background-color: #fae500; color: black; margin-bottom: 4%; " id="screenprintersection">
+        <table cellspacing="0" style="margin-left: auto; margin-right:auto;" >
+            <tr>
+                <td id="sectionimg"class="sectionbox" ><img class="sectionimg" id="whoAreWeImg" src="images/screenprinting4.jpg" style="border:black none 1px; " /></td>
+                <td class="sectionbox" id="card"style="text-align:center; ">
+
+                    <h1 class="sectionheader" style="color:black">SCREEN PRINTER</h1>
+                    <p class="sectiontext" style="color:black"> Are you ready to bring your passion for printing to a dynamic and creative team? Join Axcelmark, a leading custom T-shirt printing company, as a Screen Printer! In this pivotal role, you will operate printing equipment, mix inks, and ensure the quality of our products. Your sharp attention to detail and commitment to delivering excellent results will be crucial in this hands-on position. With a starting salary of $14 per hour, this is the perfect opportunity for someone who wants to embark on an exciting journey and contribute their skills to a reputable company. So, if you have an eye for detail and a passion for printing, don't hesitate - apply now and become a key player in our team!</p>
+                    <button id="newButton" style="float: left;" class="callToActionButton" onclick="document.location='application.html'" style="display:inline-block;">CLICK HERE TO APPLY!</button>
+                    
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!--Click here to apply button at end of page-->
+    <div style="background-image: url('images/clothingBackground.png'); background-repeat: no-repeat;background-attachment: fixed;background-size: cover; padding:20px 20px;">
+        <div class= "signup" style="padding-top: 15px; padding-bottom: 15px;margin-top: 25px; margin-bottom:25px;">
+            <button id="aboutButton" style="text-align:center; margin-left:auto  ;margin-right: auto;  font-size: 28px;" class="callToActionButton" onclick="document.location='application.html'" style="display:inline-block;">CLICK HERE TO APPLY</button>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer>
+        <div class="footerrow">
+            <h3>CONNECT WITH US</h3>
+        </div>
+        <div class="footerrow">
+            <ul class="social-links">
+                <li><a href="mailto:cstewart@axcelmark.com"><i class="fa-regular fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="footerrow">
+            <p>
+              <a id="copyrightLink"href="copyright.html">&copy;Copyright Axcelmark Official. All rights reserved.</a>
+            </p>
+        </div>
+        <script src="js/mainjs.js" type="text/javascript"></script>
+    </footer>
+    
