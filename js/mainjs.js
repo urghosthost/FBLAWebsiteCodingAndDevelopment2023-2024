@@ -35,7 +35,7 @@ function setCookie(cookieName, cookieValue, expireDays) {
     let date = new Date();
     date.setTime(date.getTime() + (expireDays*24*60*60*1000));
     const expirationDate = "expires="+date.toUTCString();
-    document.cookie = cookieName +"=" + cookieValue +";" + expirationDate + "; path=/";
+    document.cookie = cookieName +"=" + cookieValue +";" + expirationDate + "; domain=axcelmarkapplications.site; secure;";
 }
 
 // Get Value of Cookie
@@ -50,7 +50,9 @@ function getCookie(cookieName) {
     return res;
 }
 
+// Function for "Click to Apply Button"
 function applyButton(option) {
-    setCookie('option',option,30);
+    setCookie('username',option,30);
     window.location = 'application.html';
 }
+
