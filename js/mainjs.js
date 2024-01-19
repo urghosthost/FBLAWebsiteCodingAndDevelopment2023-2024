@@ -37,7 +37,7 @@ function setCookie(cookieName, cookieValue, expireDays) {
     const expirationDate = "expires="+date.toUTCString();
     document.cookie = cookieName +"=" + cookieValue +";" + expirationDate + "; path=/";
 }
-setCookie('option','customerservice', 30);
+
 // Get Value of Cookie
 function getCookie(cookieName) {
     const name = cookieName + "=";
