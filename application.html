@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="jquery-3.7.1.min.js"></script>
 <script src="https://kit.fontawesome.com/962ad0f493.js" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
 <script>
     function SubForm (){
         $.ajax({
@@ -74,8 +74,7 @@
             </select><br><br>
 
             <script>
-                var op = getCookie('username');
-                document.getElementById('job').value = op;
+                $$("div#job select").val(getCookie("option")).change();
             </script>
             <h2 style="color: #B50202;">PERSONAL INFORMATION</h2>
             <label for="fname"><h4>First Name:</h4></label>
