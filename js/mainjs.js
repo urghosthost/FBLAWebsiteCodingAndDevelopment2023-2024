@@ -28,5 +28,29 @@ function typeWriter() {
 
 // Function for sending to contact page after submitting application
 function formFunction() {
-    setTimeout(()=>{document.location = 'contact.html'}, 5000);
+     setTimeout(()=>{document.location = 'contact.html'}, 5000);
+}
+// Set/Create Cookies
+function setCookie(cookieName, cookieValue, expireDays) {
+    let date = new Date();
+    date.setTime(date.getTime() + (expireDays*24*60*60*1000));
+    const expirationDate = "expires="+date.toUTCString();
+    document.cookie = cookieName +"=" + cookieValue +";" + expirationDate + "; path=/";
+}
+setCookie('option','customerservice', 30);
+// Get Value of Cookie
+function getCookie(cookieName) {
+    const name = cookieName + "=";
+    const cookieDecoded = decodeURIComponent(document.cookie); //to be careful
+    const cookieArray = cookieDecoded.split('; ');
+    let res;
+    cookieArray .forEach(val => {
+        if (val.indexOf(name) === 0) res = val.substring(name.length);
+    })
+    return res;
+}
+
+function applyButton(option) {
+    setCookie('option',option,30);
+    window.location = 'application.html';
 }
