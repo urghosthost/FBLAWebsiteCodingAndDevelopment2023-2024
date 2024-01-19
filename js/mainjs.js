@@ -58,6 +58,6 @@ function getCookie(cookieName) {
 // Function for "Click to Apply Button"
 function applyButton(option) {
     setCookie("option",option,30);
-    window.location = 'application.html';
+    window.location = 'application.html?option=' + option;
 }
 
