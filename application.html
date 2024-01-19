@@ -74,7 +74,11 @@
             </select><br><br>
 
             <script>
-                document.getElementById('job').value = jobCategory;
+                const urlParams = new URLSearchParams(queryString);
+                if(urlParams.has('option')) {
+                    const option = urlParams.get('option');
+                    document.getElementById('job').value = option;
+                }
             </script>
             <h2 style="color: #B50202;">PERSONAL INFORMATION</h2>
             <label for="fname"><h4>First Name:</h4></label>
