@@ -30,34 +30,92 @@ function typeWriter() {
 function formFunction() {
      setTimeout(()=>{document.location = 'contact.html'}, 5000);
 }
-// Set/Create Cookies
-function setCookie(cookieName, cookieValue, expireDays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (expireDays*24*60*60*1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
-}
 
-// Get Value of Cookie
-function getCookie(cookieName) {
-    let name = cookieName + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-     for(let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
-// Function for "Click to Apply Button"
 function applyButton(option) {
-    setCookie("option",option,30);
-    window.location = 'application.html?option=' + option;
+    document.location = 'application.html?option=' + option;
 }
 
+//Create Section Div classes dynamicall
+///Background-Color: Color
+///Image: Image link in folders (images/...)
+///Orientation: Side of text (left, right)
+function section(backgroundcolor, imageLocation, orientation, header, pText, bText, bGoTo){
+    var mainDiv = document.createElement('div');
+    var tableRow = document.createElement('tr');
+    var tableSection = document.createElement('table');
+    var tableData1 = document.createElement('td');
+    var image = document.createElement('img');
+    var tableData2 = document.createElement('td');
+    var h1 = document.createElement('h1');
+    var h1Text = document.createTextNode(header);
+    var paragraph = document.createElement('p');
+    var paragraphText = document.createTextNode(text);
+    var button = document.createElement('button');
+    var buttonText = document.createTextNode(bText);
+
+    mainDiv.style.backgroundColor = backgroundcolor;
+
+    tableSection.style.marginLeft = 'auto';
+    tableSection.style.marginRight = 'auto';
+
+    tableData1.id = "sectionimg"
+    tableData1.className = "sectionbox"
+    image.className = 'sectionimg'
+    image.id = 'whoAreWeImg';
+    image.src = imageLocation;
+
+    tableData2.className = 'sectionbox';
+    tableData2.id = 'card';
+    tableData2.style.textAlign = 'center';
+    h1.className = "sectionheader";
+    h1.appendChild(h1Text);
+    paragraph.className = "sectiontext"
+    paragraph.appendChild(pText);
+    button.style.display= "inline-block";
+    button.className = "callToActionButton";
+    button.onclick = function() {document.location = bGoTo};
+    button.appendChild(bText);
+    
+    if(orientation = "left") {
+        mainDiv.className = "howtosection";
+        tableData2.style.paddingTop = '10px';
+        tableData2.style.paddingBottom = '10px';
+        tableData1.appendChild(image);
+        tableData2.appendChild(h1);
+        tableData2.appendChild(paragraph);
+        tableData2.appendChild(button)
+        if(screen.width <= 700) {
+            tableSection.id('mobilelayoutsection');
+            tableRow.appendChild(tableData1);
+            tableRow.appendChild(tableData2);
+        }
+        if(screen.width > 700) {
+            tableSection.id('desktoplayoutsection')
+            tableRow.appendChild(tableData2);
+            tableRow.appendChild(tableData1);
+        }
+        
+    }
+    if(orientation = 'right')  {
+        mainDiv.className = "aboutsection";
+        tableData1.appendChild(image);
+        tableData2.appendChild(h1);
+        tableData2.appendChild(paragraph);
+        tableData2.appendChild(button)
+        tableRow.appendChild(tableData1);
+        tableRow.appendChild(tableData2);
+  
+    }
+    tableSection.appendChild(tableRow);
+    mainDiv.appendChild(tableSection);
+    listingsSection = document.getElementById('listings');
+    listingsSection.appendChild(mainDiv);
+}
+
+// Function for hiding and unhiding text of accoridion
+const accordion = document.getElementsByClassName('acccontainer');
+for (i=0; i<accordion.length; i++) {
+    accordion[i].addEventListener('click', function () {
+        this.classList.toggle('accactive');
+    })
+}
