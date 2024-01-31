@@ -8,6 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/962ad0f493.js" crossorigin="anonymous"></script>
+<script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous">
+</script>
 <script>
     function SubForm (){
         $.ajax({
@@ -63,9 +65,9 @@
     </div>
 
     <!--Application Form-->
-    <div class="application" style="margin: 0 10% 25px 10%; text-align: center;">
+    <div class="application" style="text-align: center; background-color: orange;">
         <form id="myForm">
-            <h2 style="color: #B50202;">WHICH JOB ARE YOU APPLYING TO?</h2>
+            <h2 style="color: #B50202; padding-top:25px;">WHICH JOB ARE YOU APPLYING TO?</h2>
             <select id="job" name="job">
                 <option value="customerservice">Customer Service</option>
                 <option value="floormanager">Floor Manager</option>
@@ -163,7 +165,7 @@
                 </tbody>
             </table>
         </form>
-        <tr style="padding-bottom: 100px;"><td><p><button class="formSubButton" type="submit" onclick="SubForm()">SUBMIT</p></td></tr>
+        <tr style="padding-bottom: 100px;"><td><p style="padding-bottom:25px;"><button class="formSubButton" type="submit" onclick="SubForm()" ">SUBMIT</button></p></td></tr>
             
         
     </div>
