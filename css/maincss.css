@@ -1013,6 +1013,8 @@ button.callToActionButton:hover {
         margin-right: 0;
         padding: 12px 16px;
     }
+
+    
     
     #allButton {
         float: none;
@@ -1136,6 +1138,10 @@ button.callToActionButton:hover {
     margin-left: 30%; 
     margin-right: 30%;
 }
+
+.application {
+    margin: 0 10% 25px 10%; 
+}
 #buyButton {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1147,6 +1153,10 @@ button.callToActionButton:hover {
         margin-right: 2.5%;
         margin-bottom: 20px;
         
+    }
+    .application {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
     }
     
 }
