@@ -72,25 +72,26 @@ header {
     transition: background-color 0.5s;
 }
 /*Main CSS for navbar buttons when active */
-.navbar li a.active {
+#navbar a.active{
     color: white;
-    background-color: #FF0000;
+    background-color: #B50202;
 }
 /*Main CSS for navbar buttons when hover and active */
-.navbar li a.active:hover{
-    background-color: #B50202;
+#navbar a.active:hover{
+    background-color: #de1600;
     transition: background-color 0.5s;
 }
 /*CSS for navbar buttons for alignment*/
 .navbar li a.navbutton {
     float: right;
+    color: black;
 }
 /*Main CSS Mobile Navbar CSS*/
 .mobilenav {
     overflow: hidden;
     display: none;
     background-color: #242322;
-    color: white;
+    color: black;
     font-size: 15px;
     text-align: center;
     border: 1px solid black;
@@ -125,7 +126,7 @@ header {
     text-align: left;
 }
 /*Main CSS Mobile Navbar buttons when hovered*/
-.mobilenav a:hover {
+#myLinks a:hover {
     background: #242322;
     color: white;
     font-size: 17px;
@@ -149,13 +150,14 @@ header {
 }
 /*Main CSS Mobile Navbar buttons when active*/
 .mobilenav .active{
-    background-color: #FF0000;
+    background-color: #B50202;
     color: black;
     transition: background-color 0.5s;
 }
 /*Main CSS Mobile Navbar buttons when active and hovered*/
 .mobilenav .active:hover{
     background-color: #B50202;
+    color:black;
     transition: background-color 0.5s;
     
 }
@@ -187,7 +189,7 @@ header {
 /*Main CSS for text centered section background*/
 .section1text {
     border: none;
-    background: url('images/wideshirtscropped.WEBP');
+    background: url('images/wideshirtscropped.webp');
 }
 /*Main CSS for section 2 */
 .section2 {
