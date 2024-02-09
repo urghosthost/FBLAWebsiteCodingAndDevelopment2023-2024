@@ -12,6 +12,7 @@ function myFunction() {
         x.style.opacity = "1";
         x.style.transition = "block 0.5s visibility 0s, opacity 0.5s linear"
     }
+    return false;
 }
 
 // Function for text typing effect on index page
