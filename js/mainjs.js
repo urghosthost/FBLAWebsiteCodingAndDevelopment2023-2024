@@ -31,7 +31,7 @@ function formFunction() {
      setTimeout(()=>{document.location = 'contact.html'}, 5000);
 }
 
-//Create Section Div classes dynamically
+//Create Section Div classes dynamicallys
 ///Background-Color: Color
 ///fColor: font color
 ///Image Location: Image link in folders (images/...)
@@ -85,8 +85,8 @@ function section(backgroundcolor, fColor, imageLocation, orientation, header, pT
     paragraph.className = "sectiontext"
     paragraph.style.color = fColor;
     paragraph.appendChild(paragraphText);
-    button.style.display= "inline-block";
     button.className = "callToActionButton";
+    button.style.display= "inline-block";
     button.onclick = function() {document.location = bGoTo};
     button.appendChild(buttonText);
 
@@ -95,6 +95,12 @@ function section(backgroundcolor, fColor, imageLocation, orientation, header, pT
         mainDiv.className = "aboutsection";
         tableData2.style.paddingTop = '10px';
         tableData2.style.paddingBottom = '10px';
+        if(screen.width > 700) {
+            button.style.float = "left";
+        }
+        if(screen.width <= 700) {
+            button.style.float = "center";
+        }
         tableData1.appendChild(image);
         tableData2.appendChild(h1);
         tableData2.appendChild(paragraph);
@@ -110,6 +116,7 @@ function section(backgroundcolor, fColor, imageLocation, orientation, header, pT
         mobileDiv.appendChild(tableSectionM);
         listingsSection = document.getElementById('listings');
         listingsSection.appendChild(mainDiv);
+        
     }
 
     //Appends all the different sections into their respective areas, sets the main div class name and changes the append order for if the image is wanted on the right side of the section. Also appends the mobileDiv, basically making all the sections look the same on mobile (left aligned/image on top of paragraph)
@@ -118,6 +125,12 @@ function section(backgroundcolor, fColor, imageLocation, orientation, header, pT
         tableSectionM.setAttribute('id','mobilelayoutsection');
         mainDiv.className = "howtosection";
         mobileDiv.className = "howtosection";
+        if(screen.width > 700) {
+            button.style.float = "left";
+        }
+        if(screen.width <= 700) {
+            button.style.float = "center";
+        }
         tableData1.appendChild(image);
         tableData2.appendChild(h1);
         tableData2.appendChild(paragraph);
@@ -139,9 +152,9 @@ function section(backgroundcolor, fColor, imageLocation, orientation, header, pT
 }
 
 // Function for hiding and unhiding text of accoridion
-const accordion = document.getElementsByClassName('acccontainer');
-for (i=0; i<accordion.length; i++) {
-    accordion[i].addEventListener('click', function () {
+var acc = document.getElementsByClassName('acccontainer');
+for (i=0; i<acc.length; i++) {
+    acc[i].addEventListener('click', function () {
         this.classList.toggle('accactive');
     })
 }
