@@ -40,7 +40,7 @@ function formFunction() {
 ///pText: Paragraph Text
 ///bText: Button Text
 ///bGoTo: Location button takes you to
-function section(backgroundcolor, fColor, imageLocation, orientation, header, pText, bText, bGoTo){
+function section(backgroundcolor, fColor, imageLocation, imageAltText, orientation, header, pText, bText, bGoTo){
     //Creation of all the elements needed within the dynamic section creator
     var mainDiv = document.createElement('div');
     var mobileDiv = document.createElement('div');
@@ -74,6 +74,7 @@ function section(backgroundcolor, fColor, imageLocation, orientation, header, pT
     image.className = 'sectionimg'
     image.id = 'whoAreWeImg';
     image.src = imageLocation;
+    image.alt = imageAltText;
 
     //Sets ids, classes, styling, and functions for paragraph and button
     tableData2.className = 'sectionbox';
