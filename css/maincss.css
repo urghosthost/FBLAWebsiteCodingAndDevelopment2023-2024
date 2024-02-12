@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
     box-sizing: border-box;
@@ -1193,11 +1194,14 @@ footer h3{
 }
 .social-links {
     text-align:center;
+    color:white;
+    
 }
 .social-links li {
     list-style: none;
     display: inline-block;
     margin-left: 20px;
+    color:white;
 
 }
 
@@ -1214,6 +1218,7 @@ footer h3{
     text-decoration: none;
     transition: all 0.5s;
 }
+
 .social-links li a:active, .social-links li a:hover {
     background-color: #B50202;
     border-radius: 50%;
@@ -1312,4 +1317,12 @@ h4#tutSection {
 }
 label {
     border: 2px;
+}
+.firstfooter {
+    background-image: url('../images/clothingBackground.webp');
+    height: 250px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding:20px 20px;
 }
