@@ -33,6 +33,7 @@ function formFunction() {
 }
 
 //Create Section Div classes dynamicallys
+///Section to be added to
 ///Background-Color: Color
 ///fColor: font color
 ///Image Location: Image link in folders (images/...)
@@ -41,7 +42,8 @@ function formFunction() {
 ///pText: Paragraph Text
 ///bText: Button Text
 ///bGoTo: Location button takes you to
-function section(backgroundcolor, fColor, imageLocation, imageAltText, orientation, header, pText, bText, bGoTo){
+///pOptional: Optional paragraph text (Creates a second paragraph)
+function section(sectionName, backgroundcolor, fColor, imageLocation, imageAltText, orientation, header, pText, bText, bGoTo, pOptional=""){
     //Creation of all the elements needed within the dynamic section creator
     var mainDiv = document.createElement('div');
     var mobileDiv = document.createElement('div');
@@ -84,9 +86,16 @@ function section(backgroundcolor, fColor, imageLocation, imageAltText, orientati
     h1.className = "sectionheader";
     h1.style.color = fColor;
     h1.appendChild(h1Text);
-    paragraph.className = "sectiontext"
+    paragraph.className = "sectiontext";
     paragraph.style.color = fColor;
     paragraph.appendChild(paragraphText);
+    if(!(pOptional="")) {
+        var paragraph2 = document.createElement('p');
+        var paragraph2Text = document.createTextNode(pOptional)
+        paragraph.className = "sectiontext";
+        paragraph.style.color = fColor;
+        paragraph2.appendChild(paragraph2Text);
+    }
     button.className = "callToActionButton";
     button.style.display= "inline-block";
     button.onclick = function() {document.location = bGoTo};
@@ -106,6 +115,9 @@ function section(backgroundcolor, fColor, imageLocation, imageAltText, orientati
         tableData1.appendChild(image);
         tableData2.appendChild(h1);
         tableData2.appendChild(paragraph);
+        if(!(pOptional="")) {
+            tableData2.appendChild(paragraph2);
+        }
         tableData2.appendChild(button);
 
         tableRow.appendChild(tableData1);
@@ -116,8 +128,8 @@ function section(backgroundcolor, fColor, imageLocation, imageAltText, orientati
         tableSection.appendChild(tableRow);
         mainDiv.appendChild(tableSection);
         mobileDiv.appendChild(tableSectionM);
-        listingsSection = document.getElementById('listings');
-        listingsSection.appendChild(mainDiv);
+        contentSection = document.getElementById(sectionName);
+        contentSection.appendChild(mainDiv);
         
     }
 
@@ -147,9 +159,9 @@ function section(backgroundcolor, fColor, imageLocation, imageAltText, orientati
         tableSectionM.appendChild(tableRowM);
         mainDiv.appendChild(tableSection);
         mobileDiv.appendChild(tableSectionM);
-        listingsSection = document.getElementById('listings');
-        listingsSection.appendChild(mobileDiv);
-        listingsSection.appendChild(mainDiv);
+        contentSection = document.getElementById(sectionName);
+        contentSection.appendChild(mainDiv);
+        contentSection.appendChild(mobileDiv);
     }
 }
 
