@@ -44,7 +44,10 @@
 
         <!-- Section 1: Do you want to work at Axcelmark? -->
         <div class = "section1">
-            <img class = "section1img"  src="images/indexfrontimage.webp"alt="Shirts" style="width:100%; border: none;" alt="Background with t-shirts">
+            <picture>
+                <source srcset="images/indexfrontimage.webp" media="(min-width: 701px)">
+                <img src="images/indexfrontimagemobile.webp" class = "section1img" alt="Shirts" style="width:100%; border: none;" alt="Background with t-shirts">
+            </picture>  
             <div class="textcentered" >
                 <p class="textmainheader" style="margin-top:15px"id="typeText"></p>
                 <p class="textmainheader"><button id="mainheaderbutton"  class="callToActionButton" onclick="document.location='application.html'">APPLY TODAY</button></p>
@@ -149,7 +152,7 @@
             </div>
             <div class="footerrow">
                 <ul class="social-links">
-                    <li><a href="mailto:cstewart@axcelmark.com" alt="Mail To Cstewart@axcelmark.com"><i class="fa-regular fa-envelope"></i></a></li>
+                    <li><a href="mailto:cstewart@axcelmark.com" aria-label="mail contact info"><i class="fa-regular fa-envelope"></i></a></li>
                 </ul>
             </div>
             <div class="footerrow">
