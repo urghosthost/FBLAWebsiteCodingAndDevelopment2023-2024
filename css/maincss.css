@@ -246,8 +246,27 @@ input[type=text], select, textarea {
     text-align: center;  
     padding-left: 10px;
     padding-right: 10px;
-    background-color: black; width: 33.33333333%;margin-left: 33.3333333%; margin-right: 33.33333%;
+    background-color: black;
+    width: 33.33333333%;
+    margin-left: 33.3333333%;
+    margin-right: 33.33333%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom:25px;
 
+}
+#signupbutton {
+    background-color: transparent;
+    color:white;
+    text-decoration: none;
+    border: 2px solid white;
+    font-size:12px; 
+    font-weight: bold;
+    text-align:center; 
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 28px;
 }
 .quicklinks{
     text-align:left;
@@ -685,6 +704,23 @@ button.callToActionButton:hover {
 @media screen and (max-width: 800px) {
     .sectionimg { width: 350px}
 }
+#mainheaderbutton {
+    background-color: transparent;
+    display: block;
+    padding: 20px 20px;
+    color:white;
+    text-decoration: none;
+    border: 2px solid white;
+    font-family: 'Noto Sans', sans-serif;
+    font-size:15px;
+    margin-left: 0; 
+    margin: 25px 0 25px 0; 
+    font-weight: bold;
+    display:inline-block;
+    font-size: 30%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
 @media screen and (max-width: 700px) {
     .navbar {
         display: none;
@@ -793,22 +829,33 @@ button.callToActionButton:hover {
         padding: 0;
         margin: 0;
     }
-
-
+    #typeText {
+        font-size: 20px;
+        max-width:85%;
+        margin-left: auto;
+        margin-right:auto;
+    }
     .signup{
         margin-left: 10%;
         margin-right: 10%;
         width:80%;  
     }
+    
     button.callToActionButton {
-        font-size:14px;
+        font-size:18px;
         float: center;
         margin-bottom: 50px;
         padding: 14px 14px;
         margin: 30px 100px 30px 100px;
         text-align:center;  
     }
-    
+    #signupbutton {
+        font-size:20px;
+    }
+    #mainheaderbutton{
+        font-size: 12px; 
+        padding: 10px 10px;   
+    }
     button#aboutButton {
         font-size:14px;
         float: center;
@@ -1324,5 +1371,6 @@ label {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding:20px 20px;
+    padding:20px 20px 20px 20px;
 }
+
