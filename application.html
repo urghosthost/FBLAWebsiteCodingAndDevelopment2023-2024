@@ -8,9 +8,8 @@
 <meta name="description" content="Do you want to work at a marketing product business? Apply to Axcelmark today!">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/ef4fd3eeca.js" crossorigin="anonymous"></script>
-</script>
+<script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/ef4fd3eeca.js" crossorigin="anonymous"></script>
 <script>
     function SubForm (){
         $.ajax({
@@ -74,14 +73,6 @@
                 <option value="floormanager">Floor Manager</option>
                 <option value="screenprinter">Screen Printer</option>
             </select><br><br>
-
-            <script>
-                const queryString = window.location.search;
-                const urlParams = new URLSearchParams(queryString);
-                if(urlParams.has('option')) {
-                    const option = urlParams.get('option');
-                    document.getElementById('job').value = option;
-                }
             </script>
             <h2 style="color: #B50202;">PERSONAL INFORMATION</h2>
             <label for="fname"><h4>First Name:</h4></label>
@@ -173,11 +164,11 @@
 
     <!--Click here to apply button at end of page-->
     <div class="firstfooter">
-        <div class= "signup" style="padding-top: 15px; padding-bottom: 15px;margin-top: 25px; margin-bottom:25px;">
-            <button id="aboutButton" style="text-align:center; margin-left:auto  ;margin-right: auto;  font-size: 28px;" class="callToActionButton" onclick="document.location='application.html'" style="display:inline-block;">CLICK HERE TO APPLY</button>
+            <div class= "signup">
+                <button id="signupbutton" class="callToActionButton" onclick="document.location='application.html'" style="display:inline-block;">CLICK HERE TO APPLY</button>
+            </div>
         </div>
-    </div>
-    </div>
+        </div>
 
     <!--Footer-->
     <footer>
