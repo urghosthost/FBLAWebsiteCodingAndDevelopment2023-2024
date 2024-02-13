@@ -174,7 +174,11 @@ header {
 }
 /*Desktop CSS for .section1 class images*/
 .section1img{
-    width:100%;
+    background-image:url(../images/indexfrontimage.webp);
+    background-size: auto;
+    width: 100%;
+    height: auto;
+    
 }
 /*Main CSS for text centered section*/
 .textcentered {
@@ -232,7 +236,9 @@ header {
 }
 input[type=text], select, textarea {
     padding: 10px 10px 10px 3px;
-    width:40%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right:10%;
     border: black none 2px;
     border-radius:1px;
 }
@@ -658,7 +664,6 @@ button.callToActionButton:hover {
     background-color: #FF9900;
     color:white;
     text-align:center;
-    width:100%;
     width:90%;
     margin-left:5%;
     margin-right:5%;
@@ -698,6 +703,23 @@ button.callToActionButton:hover {
 #mobilelayoutsection {
     display: none;
 }
+.application {
+    border: black none 4px;
+    margin-top:50px;
+    background-color: #FF9900;
+    text-align:center;
+    width:90%;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:50px;
+}
+#applicationHeader {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+#listings {
+    margin-bottom:50px;
+}
 #desktoplayoutsection{
     display: inline;
 }
@@ -734,6 +756,8 @@ button.callToActionButton:hover {
         height: 300px;
         object-fit: cover;
         object-position: 50% 50%; 
+        background-image:url(../images/indexfrontimagemobile.webp);
+        background-size: auto;
     }
     #whoAreWeImg{
         margin: 0 0 0 0;
@@ -787,6 +811,36 @@ button.callToActionButton:hover {
         display: inline;
         
     }
+    .formsection {
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+    }
+    
+    #myForm {
+        width:100%;
+        margin-right:0;
+    }
+    .application {
+        margin-top:0px;
+        margin-bottom: 25px;
+        width:95%;
+        margin-left:2.5%;
+        margin-right: 2.5%;
+    }
+    .applicationtable {
+        width:95%;
+        margin-left:2.5%;
+        margin-right: 2.5%;
+
+    }
+    .formsection{
+        width:95%;
+        display:inline;
+        margin-left:2.5%;
+        margin-right: 2.5%;
+    }
+    
     .sectionimg {
         width: 150px;
         display: inline-block;
@@ -874,6 +928,9 @@ button.callToActionButton:hover {
         margin: 20px 25% 20px 25% ;
         text-align:center;  
     }
+    #listings {
+        margin-bottom:0;
+    }
     .section1 {
         margin-top: 0;
         margin-bottom: 0px;
@@ -888,8 +945,9 @@ button.callToActionButton:hover {
     }
 
     input[type=text], select, textarea {
-        width:95%;
+        width:80%;
     }
+    
     .formitem {
         padding: 10px 0px 0px 0px; 
     }
@@ -1189,9 +1247,12 @@ button.callToActionButton:hover {
     margin-right: 30%;
 }
 
-.application {
-    margin: 0 10% 25px 10%; 
+
+.formsection {
+    width:50%;
 }
+
+
 #buyButton {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1202,12 +1263,8 @@ button.callToActionButton:hover {
         margin-left: 2.5%;
         margin-right: 2.5%;
         margin-bottom: 20px;
-        
     }
-    .application {
-        margin-left: 2.5%;
-        margin-right: 2.5%;
-    }
+    
     
 }
 @media screen and (max-width: 700px){
