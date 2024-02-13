@@ -1,174 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Axcelmark Applications</title>
-<link rel="stylesheet" href="css/maincss.css">
-<link rel="icon" type="image/x-icon" href="images/favicon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Do you want to work at a marketing product business? Apply to Axcelmark today!">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous"></script>
+    <title>Axcelmark Applications</title>
+    <link rel="stylesheet" href="css/maincss.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Do you want to work at a marketing product business? Apply to Axcelmark today!">
 <script src="https://kit.fontawesome.com/ef4fd3eeca.js" crossorigin="anonymous"></script>
-<script>
-    function SubForm (){
-        $.ajax({
-            url:"https://api.apispreadsheets.com/data/z23jripocBBCj72R/",
-            type:"post",
-            data:$("#myForm").serializeArray(),
-            success: function(){
-                location.href = "applicationsubmitted.html";
-            },
-            error: function(){
-                alert("There was an error :(")
-            }
-        });
-    }
-</script>
 
-<!--Import for main js script-->
-<script src="js/mainjs.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="" crossorigin="anonymous"></script>
+    <script>
+        function SubForm() {
+            $.ajax({
+                url: "https://api.apispreadsheets.com/data/z23jripocBBCj72R/",
+                type: "post",
+                data: $("#myForm").serializeArray(),
+                success: function () {
+                    location.href = "applicationsubmitted.html";
+                },
+                error: function () {
+                    alert("There was an error :(")
+                }
+            });
+        }
+    </script>
+
+    <!--Import for main js script-->
+    <script src="js/mainjs.js" type="text/javascript"></script>
 </head>
 
-<body>    
+<body>
     <header>
         <!--Desktop Navigation Bar-->
         <div class="navbar" id="navbar">
             <ul>
-                <li style="float: left;"><a href="index.html" id="navlogo" ><img src="images/AxcelmarkLogo.webp" style="height: 65px;" alt="Axcelmark Logo" /></a></li>
-                <li style="float: right;" ><a href="contact.html" id="navbutton" ><strong>HELP</strong></a></li>
-                <li style="float: right;"><a href="application.html" id="navbutton" class="active"><strong>APPLICATION</strong></a></li>
-                <li style="float: right;"><a href="listings.html" id="navbutton" ><strong>LISTINGS</strong></a></li>
-                <li style="float: right;"><a href="index.html"  id="navbutton" ><strong>HOME</strong></a></li>
+                <li style="float: left;"><a href="index.html" id="navlogo"><img src="images/AxcelmarkLogo.webp"
+                            style="height: 65px;" alt="Axcelmark Logo" /></a></li>
+                <li style="float: right;"><a href="contact.html" id="navbutton"><strong>HELP</strong></a></li>
+                <li style="float: right;"><a href="application.html" id="navbutton"
+                        class="active"><strong>APPLICATION</strong></a></li>
+                <li style="float: right;"><a href="listings.html" id="navbutton"><strong>LISTINGS</strong></a></li>
+                <li style="float: right;"><a href="index.html" id="navbutton"><strong>HOME</strong></a></li>
             </ul>
-         
+
         </div>
         <!--Desktop Navigation Bar-->
         <div class="mobilenav">
-            <a href="index.html" id="mobileimage" > <img id="mobileimage" src="images/AxcelmarkLogo.webp" style="height:50px; "  alt="Axcelmark Logo"/></a>
+            <a href="index.html" id="mobileimage"> <img id="mobileimage" src="images/AxcelmarkLogo.webp"
+                    style="height:50px; " alt="Axcelmark Logo" /></a>
             <div id="myLinks">
                 <a href="index.html" style="color: white; "><strong>HOME</strong></a>
                 <a href="listings.html" style="color:white;"><strong>LISTINGS</strong></a>
                 <a href="application.html" class="active" style="color:white;"><strong>APPLICATION</strong></a>
                 <a href="contact.html" style="color: white;"><strong>HELP</strong></a>
             </div>
-            <a href="#" class="icon"onclick="myFunction()" >
+            <a href="#" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars" style="width:50px; height: 37px;margin-top: 35%;color:white;"></i>
             </a>
-    
+
         </div>
     </header>
     <!--Page Header/Title-->
-    <div class="applyDescription" style="margin-top: 25px; margin-bottom: 25px;">
+    <div class="applyDescription" id="applicationHeader">
         <h1>APPLICATION</h1>
-    
+
     </div>
 
     <!--Application Form-->
     <div class="application" style="text-align: center; background-color: orange;">
         <form id="myForm">
-            <label for="job"><h2 style="color: #B50202; padding-top:25px;">WHICH JOB ARE YOU APPLYING TO?</h2></label>
-            <select id="job" name="job">
-                <option value="customerservice">Customer Service</option>
-                <option value="floormanager">Floor Manager</option>
-                <option value="screenprinter">Screen Printer</option>
-            </select><br><br>
-            </script>
-            <h2 style="color: #B50202;">PERSONAL INFORMATION</h2>
-            <label for="fname"><h4>First Name:</h4></label>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname"><h4>Last Name:</h4></label>
-            <input type="text" id="lname" name="lname"><br>
-            <label for="address"><h4>Address:</h4></label>
-            <input type="text" id="address" name="address"><br>
-            <label for="city"><h4>City:</h4></label>
-            <input type="text" id="city" name="city"><br>
-            <label for="state"><h4>State:</h4></label>
-            <input type="text" id="state" name="state"><br>
-            <label for="zip"><h4>Zip/Postal Code:</h4></label>
-            <input type="text" id="zip" name="zip"><br>
-            <label for="phone"><h4>Contact Phone:</h4></label>
-            <input type="text" id="phone" name="phone"><br>
-            <label for="email"><h4>Email Address:</h4></label>
-            <input type="text" id="email" name="email"><br>
+            <table class="applicationtable">
+                <tr>
+                    <td class="formsection">
+                        <h2 style="color: #B50202;">JOBS</h2>
+                        <label for="job">
+                            <h3>Which job do you want to apply to?</h3>
+                        </label>
+                        <select id="job" name="job">
+                            <option value="customerservice">Customer Service</option>
+                            <option value="floormanager">Floor Manager</option>
+                            <option value="screenprinter">Screen Printer</option>
+                        </select><br><br>
+                        </script>
+                        <h2 style="color: #B50202;">PERSONAL INFORMATION</h2>
+                        <label for="fname">
+                            <h4>First Name:</h4>
+                        </label>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="lname">
+                            <h4>Last Name:</h4>
+                        </label>
+                        <input type="text" id="lname" name="lname"><br>
+                        <label for="address">
+                            <h4>Address:</h4>
+                        </label>
+                        <input type="text" id="address" name="address"><br>
+                        <label for="city">
+                            <h4>City:</h4>
+                        </label>
+                        <input type="text" id="city" name="city"><br>
+                        <label for="state">
+                            <h4>State:</h4>
+                        </label>
+                        <input type="text" id="state" name="state"><br>
+                        <label for="zip">
+                            <h4>Zip/Postal Code:</h4>
+                        </label>
+                        <input type="text" id="zip" name="zip"><br>
+                        <label for="phone">
+                            <h4>Contact Phone:</h4>
+                        </label>
+                        <input type="text" id="phone" name="phone"><br>
+                        <label for="email">
+                            <h4>Email Address:</h4>
+                        </label>
+                        <input type="text" id="email" name="email"><br>
+                        <h2 style="color: #B50202;">REFERENCES</h2>
+                        <h3>Please list 2 references that we may contact. Explain their relationship to you and include
+                            their phone number.</h3>
+                        <table>
+                            <tbody>
 
-            <h2 style="color: #B50202;">EMPLOYMENT HISTORY</h2>
+                                <tr>
+                                    <label for="refname1">
+                                        <h4>Name 1: </h4>
+                                    </label>
+                                    <input type="text" id="refname1" name="refname1">
+                                    <label for="relation1">
+                                        <h4>Relationship 1: </h4>
+                                    </label>
+                                    <input type="text" id="relation1" name="relation1">
+                                    <label for="number1">
+                                        <h4>Phone Number 1:</h4>
+                                    </label>
+                                    <input type="text" id="number1" name="number1">
+                                </tr>
+                                <tr>
+                                    <label for="refname2">
+                                        <h4>Name 2: </h4>
+                                    </label>
+                                    <input type="text" id="refname2" name="refname2">
+                                    <label for="relation2">
+                                        <h4>Relationship 2:</h4>
+                                    </label>
+                                    <input type="text" id="relation2" name="relation2">
+                                    <label for="number2">
+                                        <h4>Phone Number 2:</h4>
+                                    </label>
+                                    <input type="text" id="number2" name="number2">
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h2 style="color: #B50202;">REASON FOR APPLYING</h2>
+                        <label for="reason">
+                            <h4>Please give your reason for applying:</h4>
+                        </label>
+                        <textarea id="reason" name="reason" rows="8" cols="5"></textarea>
+                    </td>
+                    <td class="formsection">
+                        <h2 style="color: #B50202;">EMPLOYMENT HISTORY</h2>
+                        <h3>MOST RECENT EMPLOYMENT</h3>
+                        <label for="sdate1">
+                            <h4>Start Date:</h4>
+                        </label>
+                        <input type="text" id="sdate1" name="sdate1"><br>
+                        <label for="edate1">
+                            <h4>End Date:</h4>
+                        </label>
+                        <input type="text" id="edate1" name="edate1"><br>
+                        <label for="jobtitle1">
+                            <h4>Job Title:</h4>
+                        </label>
+                        <input type="text" id="jobtitle1" name="jobtitle1"><br>
+                        <label for="company1">
+                            <h4>Company:</h4>
+                        </label>
+                        <input type="text" id="company1" name="company1"><br>
+                        <label for="city1">
+                            <h4>City:</h4>
+                        </label>
+                        <input type="text" id="city1" name="city1"><br>
+                        <label for="state1">
+                            <h4>State:</h4>
+                        </label>
+                        <input type="text" id="state1" name="state1"><br>
+                        <label for="leaving1">
+                            <h4>Reason For Leaving:</h4>
+                        </label>
+                        <input type="text" id="leaving1" name="leaving1"><br>
+                        <label for="jobdes1">
+                            <h4>Job Description:</h4>
+                        </label>
+                        <input type="text" id="jobdes1" name="jobdes1"><br>
 
-            <h3>MOST RECENT EMPLOYMENT</h3>
-            <label for="sdate1"><h4>Start Date:</h4></label>
-            <input type="text" id="sdate1" name="sdate1"><br>
-            <label for="edate1"><h4>End Date:</h4></label>
-            <input type="text" id="edate1" name="edate1"><br>
-            <label for="jobtitle1"><h4>Job Title:</h4></label>
-            <input type="text" id="jobtitle1" name="jobtitle1"><br>
-            <label for="company1"><h4>Company:</h4></label>
-            <input type="text" id="company1" name="company1"><br>
-            <label for="city1"><h4>City:</h4></label>
-            <input type="text" id="city1" name="city1"><br>
-            <label for="state1"><h4>State:</h4></label>
-            <input type="text" id="state1" name="state1"><br>
-            <label for="leaving1"><h4>Reason For Leaving:</h4></label>
-            <input type="text" id="leaving1" name="leaving1"><br>
-            <label for="jobdes1"><h4>Job Description:</h4></label>
-            <input type="text" id="jobdes1" name="jobdes1"><br>
+                        <h3>ADDITIONAL EMPLOYMENT</h3>
+                        <label for="sdate2">
+                            <h4>Start Date:</h4>
+                        </label>
+                        <input type="text" id="sdate2" name="sdate2"><br>
+                        <label for="edate2">
+                            <h4>End Date:</h4>
+                        </label>
+                        <input type="text" id="edate2" name="edate2"><br>
+                        <label for="jobtitle2">
+                            <h4>Job Title:</h4>
+                        </label>
+                        <input type="text" id="jobtitle2" name="jobtitle2"><br>
+                        <label for="company2">
+                            <h4>Company:</h4>
+                        </label>
+                        <input type="text" id="company2" name="company2"><br>
+                        <label for="city2">
+                            <h4>City:</h4>
+                        </label>
+                        <input type="text" id="city2" name="city2"><br>
+                        <label for="state2">
+                            <h4>State:</h4>
+                        </label>
+                        <input type="text" id="state2" name="state2"><br>
+                        <label for="leaving2">
+                            <h4>Reason For Leaving:</h4>
+                        </label>
+                        <input type="text" id="leaving2" name="leaving2"><br>
+                        <label for="jobdes2">
+                            <h4>Job Description:</h4>
+                        </label>
+                        <input type="text" id="jobdes2" name="jobdes2"><br>
 
-            <h3>ADDITIONAL EMPLOYMENT</h3>
-            <label for="sdate2"><h4>Start Date:</h4></label>
-            <input type="text" id="sdate2" name="sdate2"><br>
-            <label for="edate2"><h4>End Date:</h4></label>
-            <input type="text" id="edate2" name="edate2"><br>
-            <label for="jobtitle2"><h4>Job Title:</h4></label>
-            <input type="text" id="jobtitle2" name="jobtitle2"><br>
-            <label for="company2"><h4>Company:</h4></label>
-            <input type="text" id="company2" name="company2"><br>
-            <label for="city2"><h4>City:</h4></label>
-            <input type="text" id="city2" name="city2"><br>
-            <label for="state2"><h4>State:</h4></label>
-            <input type="text" id="state2" name="state2"><br>
-            <label for="leaving2"><h4>Reason For Leaving:</h4></label>
-            <input type="text" id="leaving2" name="leaving2"><br>
-            <label for="jobdes2"><h4>Job Description:</h4></label>
-            <input type="text" id="jobdes2" name="jobdes2"><br>
-
-            <label for="other"><h4>Please list any other jobs, leadership roles, certifications or experiences that you would like the hiring manager to consider</h4></label>
-            <textarea id="other" name="other" rows="8" cols="5"></textarea>
-
-            <h2 style="color: #B50202;">REFERENCES</h2>
-            <h3>Please list 2 references that we may contact. Explain their relationship to you and include their phone number.</h3>
-            <table>
-                <tbody>
-
-                    <tr>
-                        <label for="refname1"><h4>Name 1: </h4></label>
-                        <input type="text" id="refname1" name="refname1">
-                        <label for="relation1"><h4>Relationship 1: </h4></label>
-                        <input type="text" id="relation1" name="relation1">
-                        <label for="number1"><h4>Phone Number 1:</h4></label>
-                        <input type="text" id="number1" name="number1">
-                    </tr>
-                    <tr>
-                        <label for="refname2"><h4>Name 2: </h4></label>
-                        <input type="text" id="refname2" name="refname2">
-                        <label for="relation2"><h4>Relationship 2:</h4></label>
-                        <input type="text" id="relation2" name="relation2">
-                        <label for="number2"><h4>Phone Number 2:</h4></label>
-                        <input type="text" id="number2" name="number2">
-                    </tr>
-                </tbody>
+                        <label for="other">
+                            <h4>Please list any other jobs, leadership roles, certifications or experiences that you
+                                would like the hiring manager to consider</h4>
+                        </label>
+                        <textarea id="other" name="other" rows="11" cols="5"></textarea>
+                    </td>
+                </tr>
             </table>
         </form>
-        <tr style="padding-bottom: 100px;"><td><p style="padding-bottom:25px;"><button class="formSubButton" type="submit" onclick="SubForm()" ">SUBMIT</button></p></td></tr>
+        <tr style="padding-bottom: 100px;">
+            <td>
+                <p style="padding-bottom:25px;"><button class="formSubButton" type="submit" onclick="SubForm()" ">SUBMIT</button></p></td></tr>
             
         
     </div>
 
     <!--Click here to apply button at end of page-->
-    <div class="firstfooter">
-            <div class= "signup">
-                <button id="signupbutton" class="callToActionButton" onclick="document.location='application.html'" style="display:inline-block;">CLICK HERE TO APPLY</button>
-            </div>
-        </div>
-        </div>
+    <div class=" firstfooter">
+                        <div class="signup">
+                            <button id="signupbutton" class="callToActionButton"
+                                onclick="document.location='application.html'" style="display:inline-block;">CLICK HERE
+                                TO APPLY</button>
+                        </div>
+    </div>
+    </div>
 
     <!--Footer-->
     <footer>
@@ -177,16 +264,18 @@
         </div>
         <div class="footerrow">
             <ul class="social-links">
-                <li><a href="mailto:cstewart@axcelmark.com" aria-label="mail contact info"><i class="fa-regular fa-envelope"></i></a></li>
+                <li><a href="mailto:cstewart@axcelmark.com" aria-label="mail contact info"><i
+                            class="fa-regular fa-envelope"></i></a></li>
             </ul>
         </div>
         <div class="footerrow">
             <p>
-              <a id="copyrightLink"href="copyright.html">&copy;Copyright Axcelmark Official. All rights reserved.</a>
+                <a id="copyrightLink" href="copyright.html">&copy;Copyright Axcelmark Official. All rights reserved.</a>
             </p>
         </div>
     </footer>
 
-    
+
 </body>
+
 </html>
