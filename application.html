@@ -13,24 +13,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="" crossorigin="anonymous"></script>
-    <script>
-        function SubForm() {
-            $.ajax({
-                url: "https://api.apispreadsheets.com/data/z23jripocBBCj72R/",
-                type: "post",
-                data: $("#myForm").serializeArray(),
-                success: function () {
-                    location.href = "applicationsubmitted.html";
-                },
-                error: function () {
-                    alert("There was an error :(")
-                }
-            });
-        }
-    </script>
-
     <!--Import for main js script-->
     <script src="js/mainjs.js" type="text/javascript"></script>
+
+    
 </head>
 
 <body>
@@ -71,12 +57,12 @@
     </div>
 
     <!--Application Form-->
-    <div class="application" style="text-align: center; background-color: orange;">
+    <div class="application" style="text-align: center;">
         <form id="myForm">
             <table class="applicationtable">
                 <tr>
                     <td class="formsection">
-                        <h2 style="color: #B50202;">JOBS</h2>
+                        <h2 style="color: #ff7420;">JOBS</h2>
                         <label for="job">
                             <h3>Which job do you want to apply to?</h3>
                         </label>
@@ -93,40 +79,48 @@
                                 document.getElementById('job').value = option;
                             }
                         </script>
-                        <h2 style="color: #B50202;">PERSONAL INFORMATION</h2>
+                        <h2 style="color: #ff7420;">PERSONAL INFORMATION</h2>
                         <label for="fname">
                             <h4>First Name:</h4>
                         </label>
                         <input type="text" id="fname" name="fname"><br>
+                        <label for="fname" id="fnamelabel"></label>
                         <label for="lname">
                             <h4>Last Name:</h4>
                         </label>
                         <input type="text" id="lname" name="lname"><br>
+                        <label for="lname" id="lnamelabel"></label>
                         <label for="address">
                             <h4>Address:</h4>
                         </label>
                         <input type="text" id="address" name="address"><br>
+                        <label for="address" id="addresslabel"></label>
                         <label for="city">
                             <h4>City:</h4>
                         </label>
                         <input type="text" id="city" name="city"><br>
+                        <label for="city" id="citylabel"></label>
                         <label for="state">
                             <h4>State:</h4>
                         </label>
                         <input type="text" id="state" name="state"><br>
+                        <label for="state" id="statelabel"></label>
                         <label for="zip">
                             <h4>Zip/Postal Code:</h4>
                         </label>
                         <input type="text" id="zip" name="zip"><br>
+                        <label for="zip" id="ziplabel"></label>
                         <label for="phone">
                             <h4>Contact Phone:</h4>
                         </label>
                         <input type="text" id="phone" name="phone"><br>
+                        <label for="phone" id="phonelabel"></label>
                         <label for="email">
                             <h4>Email Address:</h4>
                         </label>
                         <input type="text" id="email" name="email"><br>
-                        <h2 style="color: #B50202;">REFERENCES</h2>
+                        <label for="email" id="emaillabel"></label>
+                        <h2 style="color: #ff7420;">REFERENCES</h2>
                         <h3>Please list 2 references that we may contact. Explain their relationship to you and include
                             their phone number.</h3>
                         <table>
@@ -137,119 +131,143 @@
                                         <h4>Name 1: </h4>
                                     </label>
                                     <input type="text" id="refname1" name="refname1">
+                                    <label for="refname1" id="refname1label"></label>
                                     <label for="relation1">
                                         <h4>Relationship 1: </h4>
                                     </label>
                                     <input type="text" id="relation1" name="relation1">
+                                    <label for="relation1" id="relation1label"></label>
                                     <label for="number1">
                                         <h4>Phone Number 1:</h4>
                                     </label>
                                     <input type="text" id="number1" name="number1">
+                                    <label for="number1" id="number1label"></label>
                                 </tr>
                                 <tr>
                                     <label for="refname2">
                                         <h4>Name 2: </h4>
                                     </label>
                                     <input type="text" id="refname2" name="refname2">
+                                    <label for="refname2" id="refname2label"></label>
                                     <label for="relation2">
                                         <h4>Relationship 2:</h4>
                                     </label>
                                     <input type="text" id="relation2" name="relation2">
+                                    <label for="relation2" id="relation2label"></label>
                                     <label for="number2">
                                         <h4>Phone Number 2:</h4>
                                     </label>
                                     <input type="text" id="number2" name="number2">
+                                    <label for="number2" id="number2label"></label>
                                 </tr>
                             </tbody>
                         </table>
-                        <h2 style="color: #B50202;">REASON FOR APPLYING</h2>
+                        <h2 style="color: #ff7420;">REASON FOR APPLYING</h2>
                         <label for="reason">
                             <h4>Please give your reason for applying:</h4>
                         </label>
                         <textarea id="reason" name="reason" rows="8" cols="5"></textarea>
+                        <label for="reason" id="reasonlabel"></label>
                     </td>
                     <td class="formsection">
-                        <h2 style="color: #B50202;">EMPLOYMENT HISTORY</h2>
+                        <h2 style="color: #ff7420;">EMPLOYMENT HISTORY</h2>
                         <h3>MOST RECENT EMPLOYMENT</h3>
                         <label for="sdate1">
                             <h4>Start Date:</h4>
                         </label>
                         <input type="text" id="sdate1" name="sdate1"><br>
+                        <label for="sdate1" id="sdate1label"></label>
                         <label for="edate1">
                             <h4>End Date:</h4>
                         </label>
                         <input type="text" id="edate1" name="edate1"><br>
+                        <label for="edate1" id="edate1label"></label>
                         <label for="jobtitle1">
                             <h4>Job Title:</h4>
                         </label>
                         <input type="text" id="jobtitle1" name="jobtitle1"><br>
+                        <label for="jobtitle1" id="jobtitle1label"></label>
                         <label for="company1">
                             <h4>Company:</h4>
                         </label>
                         <input type="text" id="company1" name="company1"><br>
+                        <label for="company1" id="company1label"></label>
                         <label for="city1">
                             <h4>City:</h4>
                         </label>
                         <input type="text" id="city1" name="city1"><br>
+                        <label for="city1" id="city1label"></label>
                         <label for="state1">
                             <h4>State:</h4>
                         </label>
                         <input type="text" id="state1" name="state1"><br>
+                        <label for="state1" id="state1label"></label>
                         <label for="leaving1">
                             <h4>Reason For Leaving:</h4>
                         </label>
                         <input type="text" id="leaving1" name="leaving1"><br>
+                        <label for="leaving1" id="leaving1label"></label>
                         <label for="jobdes1">
                             <h4>Job Description:</h4>
                         </label>
                         <input type="text" id="jobdes1" name="jobdes1"><br>
+                        <label for="jobdes1" id="jobdes1label"></label>
 
                         <h3>ADDITIONAL EMPLOYMENT</h3>
                         <label for="sdate2">
                             <h4>Start Date:</h4>
                         </label>
                         <input type="text" id="sdate2" name="sdate2"><br>
+                        <label for="sdate2" id="sdate2label"></label>
                         <label for="edate2">
                             <h4>End Date:</h4>
                         </label>
                         <input type="text" id="edate2" name="edate2"><br>
+                        <label for="edate2" id="edate2label"></label>
                         <label for="jobtitle2">
                             <h4>Job Title:</h4>
                         </label>
                         <input type="text" id="jobtitle2" name="jobtitle2"><br>
+                        <label for="jobtitle2" id="jobtitle2label"></label>
                         <label for="company2">
                             <h4>Company:</h4>
                         </label>
                         <input type="text" id="company2" name="company2"><br>
+                        <label for="company2" id="company2label"></label>
                         <label for="city2">
                             <h4>City:</h4>
                         </label>
                         <input type="text" id="city2" name="city2"><br>
+                        <label for="city2" id="city2label"></label>
                         <label for="state2">
                             <h4>State:</h4>
                         </label>
                         <input type="text" id="state2" name="state2"><br>
+                        <label for="state2" id="state2label"></label>
                         <label for="leaving2">
                             <h4>Reason For Leaving:</h4>
                         </label>
                         <input type="text" id="leaving2" name="leaving2"><br>
+                        <label for="leaving2" id="leaving2label"></label>
                         <label for="jobdes2">
                             <h4>Job Description:</h4>
                         </label>
                         <input type="text" id="jobdes2" name="jobdes2"><br>
+                        <label for="jobdes2" id="jobdes2label"></label>
 
                         <label for="other">
                             <h4>Please list any other jobs, leadership roles, certifications or experiences that you
                                 would like the hiring manager to consider</h4>
                         </label>
                         <textarea id="other" name="other" rows="11" cols="5"></textarea>
+                        <label for="other" id="otherlabel"></label>
                     </td>
                 </tr>
             </table>
         </form>
         <tr style="padding-bottom: 100px;">
             <td>
-                <p style="padding-bottom:25px;"><button class="formSubButton" type="submit" onclick="SubForm()" ">SUBMIT</button></p></td></tr>
+                <p style="padding-bottom:25px;"><button class="formSubButton" type="submit" onclick="SubForm();" ">SUBMIT</button></p></td></tr>
             
         
     </div>
