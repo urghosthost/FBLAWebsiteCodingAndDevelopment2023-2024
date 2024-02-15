@@ -17,7 +17,7 @@ function myFunction() {
 
 // Function for text typing effect on index page
 var i = 0;
-var txt = "Want to join The Axcelmark team?";
+var txt = "Want to join the Axcelmark team?";
 var speed = 50; /* The speed/duration of The effect in milliseconds */
 function typeWriter() {
   if (i < txt.length) {
