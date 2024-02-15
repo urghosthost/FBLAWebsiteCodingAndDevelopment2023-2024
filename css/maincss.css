@@ -905,6 +905,7 @@ button.callToActionButton:hover {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    padding-top: 0;
   }
 
   #myForm {
@@ -1378,6 +1379,7 @@ button.callToActionButton:hover {
 
 .formsection {
   width: 50%;
+  padding-top: 25px;
 }
 
 #buyButton {
