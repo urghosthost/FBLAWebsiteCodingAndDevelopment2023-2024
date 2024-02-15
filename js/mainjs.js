@@ -34,6 +34,15 @@ function formFunction() {
   }, 5000);
 }
 
+  // var newOptions;
+  // function setOptions(options,optionsText) {
+  //   newOptions = "&newoptions=" + options + "&newoptionsText=" + optionsText;
+  // }
+  // function goTo(button, goto) {
+  //   document.location = goto;
+  // }
+
+  
 //Create Section Div classes dynamicallys
 ///Section to be added to
 ///Background-Color: Color
@@ -45,141 +54,192 @@ function formFunction() {
 ///bText: Button Text
 ///bGoTo: Location button takes you to
 ///pOptional: Optional paragraph text (Creates a second paragraph)
-function section(sectionName,backgroundcolor,fColor,imageLocation,imageAltText,orientation,header,pText,bText,bGoTo,pOptional = "") {
-  //Creation of all The elements needed within The dynamic section creator
-  var mainDiv = document.createElement("div");
-  var mobileDiv = document.createElement("div");
-  var tableSectionM = document.createElement("table");
-  var tableRow = document.createElement("tr");
-  var tableSection = document.createElement("table");
-  var tableData1 = document.createElement("td");
-  var image = document.createElement("img");
-  var tableData2 = document.createElement("td");
-  var h1 = document.createElement("h1");
+function section(sectionName, backgroundcolor, fColor, imageLocation, imageAltText, orientation, header, pText, bText, bGoTo){
+  //Creation of all the elements needed within the dynamic section creator
+  var mainDiv = document.createElement('div');
+  var tableRow = document.createElement('tr');
+  var tableSection = document.createElement('table');
+  var tableData1 = document.createElement('td');
+  var image = document.createElement('img');
+  var tableData2 = document.createElement('td');
+  var h1 = document.createElement('h1');
   var h1Text = document.createTextNode(header);
-  var paragraph = document.createElement("p");
+  var paragraph = document.createElement('p');
   var paragraphText = document.createTextNode(pText);
-  var button = document.createElement("button");
+  var button = document.createElement('button');
   var buttonText = document.createTextNode(bText);
-  var tableRowM = tableRow.cloneNode(true);
+
+  var mobileDiv = document.createElement('div');
+  var tableRowM = document.createElement('tr');
+  var tableSectionM = document.createElement('table');
+  var tableData1M = document.createElement('td');
+  var imageM = document.createElement('img');
+  var tableData2M = document.createElement('td');
+  var h1M = document.createElement('h1');
+  var h1TextM = document.createTextNode(header);
+  var paragraphM = document.createElement('p');
+  var paragraphTextM = document.createTextNode(pText);
+  var buttonM = document.createElement('button');
+  var buttonTextM = document.createTextNode(bText);
+  
 
   //Sets divs background colors
   mainDiv.style.backgroundColor = backgroundcolor;
   mobileDiv.style.backgroundColor = backgroundcolor;
 
   //Sets margin of table sections
-  tableSection.style.marginLeft = "auto";
-  tableSection.style.marginRight = "auto";
-  tableSectionM.style.marginLeft = "auto";
-  tableSectionM.style.marginRight = "auto";
+  tableSection.style.marginLeft = 'auto';
+  tableSection.style.marginRight = 'auto';
 
-  //Set ids, classes, and image file location for The image
-  tableData1.id = "sectionimg";
-  tableData1.className = "sectionbox";
-  image.className = "sectionimg";
-  image.id = "whoAreWeImg";
+  tableSectionM.style.marginLeft = 'auto';
+  tableSectionM.style.marginRight = 'auto';
+
+  //Set ids, classes, and image file location for the image
+  tableData1.id = "sectionimg"
+  tableData1.className = "sectionbox"
+  image.className = 'sectionimg'
+  image.id = 'whoAreWeImg';
   image.src = imageLocation;
   image.alt = imageAltText;
 
+  tableData1M.id = "sectionimg"
+  tableData1M.className = "sectionbox"
+  imageM.className = 'sectionimg'
+  imageM.id = 'whoAreWeImg';
+  imageM.src = imageLocation;
+  imageM.alt = imageAltText;
+
   //Sets ids, classes, styling, and functions for paragraph and button
-  tableData2.className = "sectionbox";
-  tableData2.id = "card";
-  tableData2.style.textAlign = "center";
+  tableData2.className = 'sectionbox';
+  tableData2.id = 'card';
+  tableData2.style.textAlign = 'center';
   h1.className = "sectionheader";
   h1.style.color = fColor;
   h1.appendChild(h1Text);
-  paragraph.className = "sectiontext";
+  paragraph.className = "sectiontext"
   paragraph.style.color = fColor;
   paragraph.appendChild(paragraphText);
-  if (!(pOptional === "")) {
-    var paragraph2 = document.createElement("p");
-    var paragraph2Text = document.createTextNode(pOptional);
-    paragraph2.className = "sectiontext";
-    paragraph2.style.color = fColor;
-    paragraph2.appendChild(paragraph2Text);
-  }
   button.className = "callToActionButton";
-  button.style.display = "inline-block";
+  button.style.display= "inline-block";
   button.style.borderColor = fColor;
   button.style.color = fColor;
+  button.style.float = "left";
   button.onmouseenter = function() {
     button.style.backgroundColor = fColor;
-    if(fColor == "white") {
+    if(fColor = "white") {
       button.style.color = 'black';
+      button.style.backgroundColor = fColor;  
     }
-    else {
-      button.style.color = "white";
+    if(fColor = "black") {
+      button.style.color = 'white';
+      button.style.borderColor = fColor
     }
   }
   button.onmouseleave = function() {
     button.style.backgroundColor = "transparent";
     button.style.color = fColor;
-  }
-  button.onclick = function () {
-    document.location = bGoTo;
   };
+  button.onclick = function() {document.location = bGoTo};
   button.appendChild(buttonText);
+  
 
-  //Appends all The different sections into Their respective areas, sets The main div class name and changes The append order for if The image is wanted on The left side of The section
-  if (orientation == "left") {
-    mainDiv.className = "aboutsection";
-    tableData2.style.paddingTop = "10px";
-    tableData2.style.paddingBottom = "10px";
-    if (screen.width > 700) {
-      button.style.float = "left";
+  tableData2M.className = 'sectionbox';
+  tableData2M.id = 'card';
+  tableData2M.style.textAlign = 'center';
+  h1M.className = "sectionheader";
+  h1M.style.color = fColor;
+  h1M.appendChild(h1TextM);
+  paragraphM.className = "sectiontext"
+  paragraphM.style.color = fColor;
+  paragraphM.appendChild(paragraphTextM);
+  buttonM.className = "callToActionButton";
+  buttonM.style.display= "inline-block";
+  buttonM.style.color = fColor;
+  buttonM.style.float = "center";
+  buttonM.onmouseenter = function() {
+    buttonM.style.backgroundColor = fColor;
+    if(fColor = "white") {
+      buttonM.style.color = 'black';
+      button.style.backgroundColor = fColor;
+      buttonM.style.borderColor = fColor;
     }
-    if (screen.width <= 700) {
-      button.style.float = "center";
+    if(fColor = "black") {
+      buttonM.style.color = 'white';
+      button.style.backgroundColor = fColor;
+      buttonM.style.borderColor = fColor
     }
-    tableData1.appendChild(image);
-    tableData2.appendChild(h1);
-    tableData2.appendChild(paragraph);
-    if (!(pOptional === "")) {
-      tableData2.appendChild(paragraph2);
-    }
-    tableData2.appendChild(button);
+  }
+  buttonM.onmouseleave = function() {
+    buttonM.style.backgroundColor = "transparent";
+    buttonM.style.color = fColor;
+  };
+  buttonM.onclick = function() {document.location = bGoTo};
+  buttonM.appendChild(buttonTextM);
 
-    tableRow.appendChild(tableData1);
-    tableRow.appendChild(tableData2);
-    mainDiv.appendChild(tableSection);
-    listingsSection = document.getElementById("listings");
-    listingsSection.appendChild(mainDiv);
-    tableSection.appendChild(tableRow);
-    mainDiv.appendChild(tableSection);
-    mobileDiv.appendChild(tableSectionM);
-    contentSection = document.getElementById(sectionName);
-    contentSection.appendChild(mainDiv);
+  //Appends all the different sections into their respective areas, sets the main div class name and changes the append order for if the image is wanted on the left side of the section
+  if(orientation == 'left') {
+      mainDiv.className = "aboutsection";
+      tableData2.style.paddingTop = '10px';
+      tableData2.style.paddingBottom = '10px';
+      if(screen.width > 700) {
+          button.style.float = "left";
+      }
+      if(screen.width <= 700) {
+          button.style.float = "center";
+      }
+      tableData1.appendChild(image);
+      tableData2.appendChild(h1);
+      tableData2.appendChild(paragraph);
+      tableData2.appendChild(button);
+
+      tableRow.appendChild(tableData1);
+      tableRow.appendChild(tableData2);
+      mainDiv.appendChild(tableSection);
+      var contentSection = document.getElementById(sectionName);
+
+      contentSection.appendChild(mainDiv);
+      tableSection.appendChild(tableRow);
+      mainDiv.appendChild(tableSection);
+
+      listingsSection = document.getElementById('listings');
+      listingsSection.appendChild(mainDiv);
+      
   }
 
-  //Appends all The different sections into Their respective areas, sets The main div class name and changes The append order for if The image is wanted on The right side of The section. Also appends The mobileDiv, basically making all The sections look The same on mobile (left aligned/image on top of paragraph)
-  else if (orientation == "right") {
-    tableSection.setAttribute("id", "desktoplayoutsection");
-    tableSectionM.setAttribute("id", "mobilelayoutsection");
-    mainDiv.className = "howtosection";
-    mobileDiv.className = "howtosection";
-    if (screen.width > 700) {
-      button.style.float = "left";
-    }
-    if (screen.width <= 700) {
-      button.style.float = "center";
-    }
-    tableData1.appendChild(image);
-    tableData2.appendChild(h1);
-    tableData2.appendChild(paragraph);
-    tableData2.appendChild(button);
-    tableData2M = tableData2.cloneNode(true);
-    tableData1M = tableData1.cloneNode(true);
-    tableRow.appendChild(tableData2);
-    tableRow.appendChild(tableData1);
-    tableRowM.appendChild(tableData1M);
-    tableRowM.appendChild(tableData2M);
-    tableSection.appendChild(tableRow);
-    tableSectionM.appendChild(tableRowM);
-    mainDiv.appendChild(tableSection);
-    mobileDiv.appendChild(tableSectionM);
-    contentSection = document.getElementById(sectionName);
-    contentSection.appendChild(mainDiv);
-    contentSection.appendChild(mobileDiv);
+  //Appends all the different sections into their respective areas, sets the main div class name and changes the append order for if the image is wanted on the right side of the section. Also appends the mobileDiv, basically making all the sections look the same on mobile (left aligned/image on top of paragraph)
+  else if(orientation == 'right'){
+      tableSection.setAttribute('id','desktoplayoutsection');
+      tableSectionM.setAttribute('id','mobilelayoutsection');
+      mainDiv.className = "howtosection";
+      mobileDiv.className = "howtosection";
+
+      tableData1.appendChild(image);
+      tableData2.appendChild(h1);
+      tableData2.appendChild(paragraph);
+      tableData2.appendChild(button);
+
+      tableData1M.appendChild(imageM);
+      tableData2M.appendChild(h1M);
+      tableData2M.appendChild(paragraphM);
+      tableData2M.appendChild(buttonM)
+
+      tableRow.appendChild(tableData2);
+      tableRow.appendChild(tableData1);
+
+      tableRowM.appendChild(tableData1M);
+      tableRowM.appendChild(tableData2M);
+
+      tableSection.appendChild(tableRow);
+
+      tableSectionM.appendChild(tableRowM);
+
+      mainDiv.appendChild(tableSection);
+
+      mobileDiv.appendChild(tableSectionM);
+
+      listingsSection = document.getElementById(sectionName);
+      listingsSection.appendChild(mobileDiv);
+      listingsSection.appendChild(mainDiv);
   }
 }
 
@@ -829,5 +889,4 @@ function SubForm() {
       }
   });
   }
-  
 }
