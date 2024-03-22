@@ -5,40 +5,41 @@
 <head>
     <title>Axcelmark Applications</title>
     <link rel="stylesheet" href="css/maincss.css">
-    <link rel="icon" type="image/x-icon" href="images/  ">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Do you want to work at a marketing product business? Apply to Axcelmark today!">
     <script src="https://kit.fontawesome.com/ef4fd3eeca.js" crossorigin="anonymous"></script>
-    <script src="js/mainjs.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="" crossorigin="anonymous"></script>
 </head>
 
 <body onload="typeWriter()">
-
     <header>
         <!-- Desktop navigation bar -->
         <div class="navbar" id="navbar">
             <ul>
                 <li style="float: left;"><a href="index.html" id="navlogo"><img src="images/AxcelmarkLogo.webp"
                             style="height: 65px;" alt="Axcelmark Logo" /></a></li>
-                <li style="float: right;"><a href="contact.html" id="navbutton"><strong>HELP</strong></a></li>
-                <li style="float: right;"><a href="application.html" id="navbutton"><strong>APPLICATION</strong></a>
+                <li style="float: right;"><a href="contact.html" id="navbutton">HELP</a></li>
+                <li style="float: right;"><a href="application.html" id="navbutton">APPLICATION</a>
                 </li>
-                <li style="float: right;"><a href="listings.html" id="navbutton"><strong>LISTINGS</strong></a></li>
-                <li style="float: right;"><a href="index.html" class="active" id="navbutton"><strong>HOME</strong></a>
-                </li>
+                <li style="float: right;"><a href="benefits.html" id="navbutton">BENEFITS</a></li>     
+                <li style="float: right;"><a href="listings.html" id="navbutton">LISTINGS</a></li>
+                <li style="float: right;"><a href="index.html" class="active" id="navbutton">HOME</a></li>
             </ul>
-        </div>
 
+        </div>
         <!-- Mobile navigation bar-->
         <div class="mobilenav">
             <a href="index.html" id="mobileimage"><img id="mobileimage" src="images/AxcelmarkLogo.webp"
                     style="height:50px; " alt="Axcelmark Logo" /></a>
             <div id="myLinks">
-                <a href="index.html" class="active" style="color: white; "><strong>HOME</strong></a>
-                <a href="listings.html" style="color:white;"><strong>LISTINGS</strong></a>
-                <a href="application.html" style="color:white;"><strong>APPLICATION</strong></a>
-                <a href="contact.html" style="color: white;"><strong>HELP</strong></a>
+                <a href="index.html" class="active" style="color: white; ">HOME</a>
+                <a href="listings.html" style="color:white;">LISTINGS</a>
+                <a href="benefits.html" style="color:white;">BENEFITS</a>
+                <a href="application.html" style="color:white;">APPLICATION</a>
+                <a href="contact.html" style="color: white;">HELP</a>
             </div>
             <a href="#" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars" style="width:50px; height: 37px;margin-top: 35%;color:white;"></i>
@@ -50,21 +51,20 @@
     <div class="content">
 
         <!-- Section 1: Do you want to work at Axcelmark? -->
-        <div class="section1">
+        <div class="section1" id="fadeIn">
             <picture>
                 <source srcset="images/indexfrontimage.webp" media="(min-width: 701px)">
                 <img src="images/indexfrontimagemobile.webp" class="section1img" alt="Shirts"
                     style="width:100%; border: none;" alt="Background with t-shirts">
             </picture>
-            <div class="textcentered">
+            <div class="textcentered" id="textcentered">
                 <p class="textmainheader" style="margin-top:15px" id="typeText"></p>
-                <p class="textmainheader"><button id="mainheaderbutton" class="callToActionButton"
-                        onclick="document.location='application.html'">APPLY TODAY</button></p>
             </div>
         </div>
+        
 
         <!-- Explanation for what Axcelmark is -->
-        <div class="applyDescription">
+        <div class="applyDescription" id="fadeIn">
             <h1>WHAT IS AXCELMARK?</h1>
             <p>Axcelmark is a marketing service that specializes in creating a wide range of products for businesses.
                 Our product offerings include custom embroidery on clothing items such as t-shirts, hats, hoodies, as
@@ -73,33 +73,8 @@
                 include but is not limited to custom embroidered clothing (t-shirts, hats, hoodies, etc), accessories,
                 and more. We create these products for many businesses. </p>
         </div>
-
-        <!--Current job listings-->
-        <div class="indextable">
-            <table cellspacing="10" style="max-width:50%; margin-left: auto; margin-right:auto; margin-bottom:50px;">
-                <tr style="text-align: center;">
-                    <th colspan="3"><strong style="font-size: 40px;">CURRENT JOB LISTINGS</strong></th>
-                </tr>
-                <tr>
-                    <td onclick="location.href='listings.html#customerservicesection'" class="categorybutton"><img
-                            class="categorybuttonimg" src="images/customerserviceiconwhite.webp"
-                            alt="Customer Service Icon"><br>
-                        <h3 id="categorybuttonheader">CUSTOMER SERVICE</h3>
-                    </td>
-                    <td onclick="location.href='listings.html#floormanagersection'" class="categorybutton"><img
-                            class="categorybuttonimg" src="images/managericonwhite.webp" alt="Floor Manager Icon"><br>
-                        <h3 id="categorybuttonheader">FLOOR<br>MANAGER</h3>
-                    </td>
-                    <td onclick="location.href='listings.html#screenprintersection'" class="categorybutton"><img
-                            class="categorybuttonimg" src="images/screenprintericonwhite.webp" alt="Screen Printer Icon"><br>
-                        <h3 id="categorybuttonheader">SCREEN<br>PRINTER</h3>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
         <!-- Why should you apply section -->
-        <div class="aboutsection">
+        <div class="aboutsection" id="slideInLeft">
             <table style="margin-left: auto; margin-right:auto;">
                 <tr>
                     <td id="sectionimg" class="sectionbox"><img class="sectionimg" id="whoAreWeImg"
@@ -122,16 +97,39 @@
                             <li>Flexible Shifts and Schedules</li>
                         </ul>
                         </p>
-                        <button id="aboutButton" style="float: left;" class="callToActionButton"
-                            onclick="document.location='application.html'" style="display:inline-block;">CLICK HERE TO
-                            APPLY!</button>
+                        <button style="float: left;" class="dynamicButtonWhite"
+                            onclick="document.location='listings.html'" style="display:inline-block;">VIEW OUR LISTINGS</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Current job listings-->
+        <div class="indextable" id="fadeIn">
+            <table cellspacing="10" style="max-width:50%; margin-left: auto; margin-right:auto; margin-bottom:50px;">
+                <tr style="text-align: center;">
+                    <th colspan="3"><strong style="font-size: 40px;">CURRENT JOB LISTINGS</th>
+                </tr>
+                <tr>
+                    <td onclick="location.href='listings.html#customerservicesection'" class="categorybutton"><img
+                            class="categorybuttonimg" src="images/customerserviceicon.webp"
+                            alt="Customer Service Icon"><br>
+                        <h3 id="categorybuttonheader">CUSTOMER SERVICE</h3>
+                    </td>
+                    <td onclick="location.href='listings.html#floormanagersection'" class="categorybutton"><img
+                            class="categorybuttonimg" src="images/managericon.webp" alt="Floor Manager Icon"><br>
+                        <h3 id="categorybuttonheader">FLOOR<br>MANAGER</h3>
+                    </td>
+                    <td onclick="location.href='listings.html#screenprintersection'" class="categorybutton"><img
+                            class="categorybuttonimg" src="images/screenprintericon.webp" alt="Screen Printer Icon"><br>
+                        <h3 id="categorybuttonheader">SCREEN<br>PRINTER</h3>
                     </td>
                 </tr>
             </table>
         </div>
 
         <!--Desktop layout for Minimum Requirements section-->
-        <div class="howtosection">
+        <div class="howtosection" id="slideInRight">
             <table cellspacing="0" style="height: 100%; margin: auto auto;" id="desktoplayoutsection">
                 <tr>
 
@@ -145,8 +143,7 @@
                         </ul>
                         </p>
                         <button style="float: left; " class="callToActionButton"
-                            onclick="document.location='listings.html'" style="display:inline-block">CLICK HERE TO VIEW
-                            LISTINGS!</button>
+                            onclick="document.location='listings.html'" style="display:inline-block">APPLY HERE TODAY</button>
                     </td>
                     <td id="sectionimg" class="sectionbox"><img src="images/embroideryImage.webp" class="sectionimg"
                             id="tutorialsHomeImg" style="border:black none 1px;" alt="Image of sewing machine" /></td>
@@ -156,7 +153,7 @@
         </div>
 
         <!--Mobile layout for Minimum Requirements section-->
-        <div class="howtosection">
+        <div class="howtosection animate__animated" id="slideInRight">
             <table style="height: 100%; margin: auto auto;" id="mobilelayoutsection">
                 <tr>
                     <td id="sectionimg" class="sectionbox"><img src="images/embroideryImage.webp" class="sectionimg"
@@ -171,7 +168,7 @@
                         </ul>
                         </p>
                         <button class="callToActionButton" onclick="document.location='listings.html'"
-                            style="display:inline-block">CLICK HERE TO VIEW LISTINGS!</button>
+                            style="display:inline-block">APPLY HERE TODAY</button>
                     </td>
                 </tr>
             </table>
@@ -205,9 +202,8 @@
     </footer>
 
     <!--Import for main js script-->
-    
-    <!--Font Awesome icons script-->
-
+    <script src="js/mainjs.js" type="text/javascript"></script>
+    <script src="js/animation.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -10,11 +10,13 @@
     <script src="https://kit.fontawesome.com/ef4fd3eeca.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="" crossorigin="anonymous"></script>
     <!--Import for main js script-->
     <script src="js/mainjs.js" type="text/javascript"></script>
+    
     
 </head>
 
@@ -25,23 +27,25 @@
             <ul>
                 <li style="float: left;"><a href="index.html" id="navlogo"><img src="images/AxcelmarkLogo.webp"
                             style="height: 65px;" alt="Axcelmark Logo" /></a></li>
-                <li style="float: right;"><a href="contact.html" id="navbutton"><strong>HELP</strong></a></li>
+                <li style="float: right;"><a href="contact.html" id="navbutton">HELP</a></li>
                 <li style="float: right;"><a href="application.html" id="navbutton"
-                        class="active"><strong>APPLICATION</strong></a></li>
-                <li style="float: right;"><a href="listings.html" id="navbutton"><strong>LISTINGS</strong></a></li>
-                <li style="float: right;"><a href="index.html" id="navbutton"><strong>HOME</strong></a></li>
+                        class="active">APPLICATION</a></li>
+                <li style="float: right;"><a href="benefits.html" id="navbutton">BENEFITS</a></li>        
+                <li style="float: right;"><a href="listings.html" id="navbutton">LISTINGS</a></li>
+                <li style="float: right;"><a href="index.html" id="navbutton">HOME</a></li>
             </ul>
 
         </div>
-        <!--Desktop Navigation Bar-->
+        <!--Mobile Navigation Bar-->
         <div class="mobilenav">
             <a href="index.html" id="mobileimage"> <img id="mobileimage" src="images/AxcelmarkLogo.webp"
                     style="height:50px; " alt="Axcelmark Logo" /></a>
             <div id="myLinks">
-                <a href="index.html" style="color: white; "><strong>HOME</strong></a>
-                <a href="listings.html" style="color:white;"><strong>LISTINGS</strong></a>
-                <a href="application.html" class="active" style="color:white;"><strong>APPLICATION</strong></a>
-                <a href="contact.html" style="color: white;"><strong>HELP</strong></a>
+                <a href="index.html" style="color: white; ">HOME</a>
+                <a href="listings.html" style="color:white;">LISTINGS</a>
+                <a href="benefits.html" style="color:white;">BENEFITS</a>
+                <a href="application.html" class="active" style="color:white;">APPLICATION</a>
+                <a href="contact.html" style="color: white;">HELP</a>
             </div>
             <a href="#" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars" style="width:50px; height: 37px;margin-top: 35%;color:white;"></i>
@@ -56,7 +60,7 @@
     </div>
 
     <!--Application Form-->
-    <div class="application" style="text-align: center;">
+    <div class="application animate__animated" style="text-align: center;" id="fadeInleft">
         <form id="myForm">
             <table class="applicationtable">
                 <tr>
@@ -170,7 +174,7 @@
                     </td>
                     <td class="formsection">
                         <h2 style="color: #ff7420;">EMPLOYMENT HISTORY</h2>
-                        <h3>MOST RECENT EMPLOYMENT</h3>
+                        <h3>MOST RECENT EMPLOYMENT: REQUIRED</h3>
                         <label for="sdate1">
                             <h4>Start Date:</h4>
                         </label>
@@ -212,47 +216,47 @@
                         <input type="text" id="jobdes1" name="jobdes1"><br>
                         <label for="jobdes1" id="jobdes1label"></label>
 
-                        <h3>ADDITIONAL EMPLOYMENT</h3>
+                        <h3>ADDITIONAL EMPLOYMENT: OPTIONAL</h3>
                         <label for="sdate2">
                             <h4>Start Date:</h4>
                         </label>
                         <input type="text" id="sdate2" name="sdate2"><br>
-                        <label for="sdate2" id="sdate2label"></label>
+                        <label for="sdate2" id="sdate2label"> </label>
                         <label for="edate2">
                             <h4>End Date:</h4>
                         </label>
                         <input type="text" id="edate2" name="edate2"><br>
-                        <label for="edate2" id="edate2label"></label>
+                        <label for="edate2" id="edate2label"> </label>
                         <label for="jobtitle2">
                             <h4>Job Title:</h4>
                         </label>
                         <input type="text" id="jobtitle2" name="jobtitle2"><br>
-                        <label for="jobtitle2" id="jobtitle2label"></label>
+                        <label for="jobtitle2" id="jobtitle2label"> </label>
                         <label for="company2">
                             <h4>Company:</h4>
                         </label>
                         <input type="text" id="company2" name="company2"><br>
-                        <label for="company2" id="company2label"></label>
+                        <label for="company2" id="company2label"> </label>
                         <label for="city2">
                             <h4>City:</h4>
                         </label>
                         <input type="text" id="city2" name="city2"><br>
-                        <label for="city2" id="city2label"></label>
+                        <label for="city2" id="city2label"> </label>
                         <label for="state2">
                             <h4>State:</h4>
                         </label>
                         <input type="text" id="state2" name="state2"><br>
-                        <label for="state2" id="state2label"></label>
-                        <label for="leaving2">
+                        <label for="state2" id="state2label"> </label>
+                        <label for="leaving2" >
                             <h4>Reason For Leaving:</h4>
                         </label>
                         <input type="text" id="leaving2" name="leaving2"><br>
-                        <label for="leaving2" id="leaving2label"></label>
+                        <label for="leaving2" id="leaving2label"> </label>
                         <label for="jobdes2">
                             <h4>Job Description:</h4>
                         </label>
                         <input type="text" id="jobdes2" name="jobdes2"><br>
-                        <label for="jobdes2" id="jobdes2label"></label>
+                        <label for="jobdes2" id="jobdes2label"> </label>
 
                         <label for="other">
                             <h4>Please list any other jobs, leadership roles, certifications or experiences that you
@@ -298,7 +302,7 @@
             </p>
         </div>
     </footer>
-
+    <script src="js/animation.js" type="text/javascript"></script>
 
 </body>
 
