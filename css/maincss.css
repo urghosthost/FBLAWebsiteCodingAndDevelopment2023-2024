@@ -4,6 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nixie+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('nav.css');
 
 * {
   box-sizing: border-box;
@@ -15,162 +17,13 @@ html {
 
 /*Creates main basis for body coloring */
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   border: gray none 4px;
   margin: 0;
   background-color: rgb(231, 231, 231);
-}
-
-/*Makes sticky header */
-header {
-  z-index: 10000;
-  position: sticky;
-  padding: 0;
-  top: 0px;
-  width: 100%;
-}
-
-/*Main CSS for navbar bar */
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border-bottom: 1px solid black;
-  background-color: #242322;
-}
-
-.navbar li {
-  float: left;
-  padding: 5px;
-}
-
-#navbutton {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 28px 28px;
-  text-decoration: none;
-  border: 1px hidden red;
-  border-radius: 2px;
-}
-
-#navlogo {
-  margin-top: 5px;
-  display: block;
-  color: #666;
-  text-align: center;
-  text-decoration: none;
-}
-
-.navbar ul.scrolled {
-  background-color: black;
-  transition: 0.5s;
-}
-
-/*Main CSS for navbar buttons when not active */
-.navbar li a:hover:not(.active) {
-  background-color: black;
-  transition: background-color 0.5s;
-}
-
-/*Main CSS for navbar buttons when active */
-#navbar a.active {
-  color: white;
-  background-color: #b50202;
-}
-
-/*Main CSS for navbar buttons when hover and active */
-#navbar a.active:hover {
-  background-color: #de1600;
-  transition: background-color 0.5s;
-}
-
-/*CSS for navbar buttons for alignment*/
-.navbar li a.navbutton {
-  float: right;
-  color: black;
-}
-
-/*Main CSS Mobile Navbar CSS*/
-.mobilenav {
-  overflow: hidden;
-  display: none;
-  background-color: #242322;
-  color: black;
-  font-size: 15px;
-  text-align: center;
-  border: 1px solid black;
-  z-index: 10000;
-  position: sticky;
-  top: 0px;
-  width: 100%;
-}
-
-/*Main CSS Mobile Navbar CSS for buttons to be hidden on default*/
-.mobilenav #myLinks {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-  background-color: black;
-}
-
-#navbar {
-  overflow: hidden;
-}
-
-/*Main CSS Mobile Navbar CSS for buttons*/
-.mobilenav a {
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-  background-color: #242322;
-  transition: background-color 0.5s;
-}
-
-/*Main CSS Mobile Navbar CSS for logo*/
-#mobileimage {
-  text-align: left;
-}
-
-/*Main CSS Mobile Navbar buttons when hovered*/
-#myLinks a:hover {
-  background: #242322;
-  color: white;
-  font-size: 17px;
-  text-transform: capitalize;
-  transition: background-color 0.5s;
-}
-
-/*Margin for Current Job Openings Section*/
-.indextable {
-  margin-top: 45px;
-}
-
-/*Main CSS Mobile Navbar icon (tripple lines)*/
-.mobilenav a.icon {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  text-align: center;
-  color: white;
-  transition: background-color 0.5s;
-}
-
-/*Main CSS Mobile Navbar buttons when active*/
-.mobilenav .active {
-  background-color: #b50202;
-  color: black;
-  transition: background-color 0.5s;
-}
-
-/*Main CSS Mobile Navbar buttons when active and hovered*/
-.mobilenav .active:hover {
-  background-color: #b50202;
-  color: black;
-  transition: background-color 0.5s;
+  
 }
 
 /*Desktop CSS for .section1 class*/
@@ -182,6 +35,16 @@ header {
   margin-bottom: 0px;
   border: gray none 4px;
   border: none;
+  font-weight: 600;
+  
+  
+}
+.animate__delay-2s{
+  --animation-delay: 0.5s;
+} 
+
+.sectionimg {
+  width: 450px;
 }
 
 /*Desktop CSS for .section1 class images*/
@@ -198,49 +61,13 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  font-size: 50px;
+  animation-duration: 0.5s;
+  width: 100%; 
+  font-size: 45px;
   transform: translate(-50%, -50%);
   border: gray none 4px;
 }
 
-/*Main CSS for text centered section background*/
-.section1text {
-  border: none;
-  background: url("images/wideshirtscropped.webp");
-}
-
-/*Main CSS for section 2 */
-.section2 {
-  padding: 10px 0px 10px 0px;
-  width: 100%;
-  margin: 0;
-  text-align: left;
-  align-items: center;
-  border: gray none 4px;
-}
-
-/*Main CSS for section 2 text*/
-.section2text {
-  font-size: 32px;
-  text-align: left;
-  width: 40%;
-  margin-left: 6.67%;
-  margin-right: 6.67%;
-}
-
-/*Main CSS for section 2 text images*/
-.section2image {
-  float: left;
-  width: 40%;
-  margin-right: 6.67%;
-}
-
-/*Main CSS for section images*/
-.sectionimg {
-  margin-top: 0px;
-  width: 450px;
-}
 
 /*Main CSS for section images*/
 .categorybuttonimg {
@@ -261,7 +88,7 @@ textarea {
   margin-left: 10%;
   margin-right: 10%;
   border: black none 2px;
-  border-radius: 1px;
+  border-radius: 5px;
 }
 
 .contactinfo {
@@ -290,7 +117,7 @@ textarea {
   text-decoration: none;
   border: 2px solid white;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 500;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -400,11 +227,12 @@ button.callToActionButton {
   color: black;
   text-decoration: none;
   border: 2px solid black;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   margin-left: 0;
   margin: 25px 0 25px 0;
-  font-weight: bold;
+  border-radius: 5px;
+  font-weight: 500;
 }
 
 button.callToActionButton:hover {
@@ -419,18 +247,68 @@ button.callToActionButton:hover {
   content: " -> ";
 }
 
+button.dynamicButtonBlack {
+  color: black;
+  background-color: transparent;
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-left: 0;
+  margin: 25px 0 25px 0;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+button.dynamicButtonBlack:hover {
+  background-color: black;
+  color: white;
+  padding: 24px 24px;
+  transition: background-color 0.5s;
+  transition: color 0.5s;
+  transition: padding 0.25s;
+
+}
+
+button.dynamicButtonWhite{
+  color: white;
+  background-color: transparent;
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid white;
+  font-size: 15px;
+  margin-left: 0;
+  margin: 25px 0 25px 0;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+button.dynamicButtonWhite:hover {
+  background-color: white;
+  color: black;
+  padding: 24px 24px;
+  transition: background-color 0.5s;
+  transition: color 0.5s;
+  transition: padding 0.25s;
+
+}
+
 #shopallbutton {
   background-color: transparent;
   display: block;
   padding: 20px 20px;
   color: gray;
   text-decoration: none;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   margin-top: 25px;
   margin-left: 100px;
   margin-right: 100px;
-  font-weight: bold;
+  font-weight: 500;
   border: none;
 }
 
@@ -441,11 +319,11 @@ button.callToActionButton:hover {
   color: black;
   text-decoration: none;
   border: 2px solid black;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   margin-left: 0;
   margin: 25px 0 25px 0;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 #newButton {
@@ -455,11 +333,11 @@ button.callToActionButton:hover {
   color: black;
   text-decoration: none;
   border: 2px solid black;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   margin-left: 0;
   margin: 25px 0 25px 0;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 #shopallbutton:hover {
@@ -574,22 +452,24 @@ button.callToActionButton:hover {
 }
 
 .categorybutton {
-  background-color: #800020;
+  background-color: #ff7420;
   margin: 0% 16.67% 0% 16.67%;
-  padding: 25px 25px 10px 25px;
+  padding: 25px 35px 10px 35px;
   width: 125px;
   height: 125px;
   text-align: center;
-  color: white;
+  color: black;
   border: gray rounded 2 px;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .categorybutton:hover {
-  background-color: #a8002a;
+  background-color: #f98a45;
   transition: background-color 0.5s;
   cursor: pointer;
 }
+
+
 
 
 .footerheader {
@@ -605,8 +485,9 @@ button.callToActionButton:hover {
   color: white;
   font-size: 20px;
   text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
 }
 
 .formSubButton:hover {
@@ -714,13 +595,16 @@ button.callToActionButton:hover {
 .aboutsection {
   border: black none 4px;
   margin-top: 50px;
-  background-color: #ff7420;
-  color: black;
+  background-color: #800020;
+  border-radius: 5px;
+  color: white;
   text-align: center;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
+
+
 
 .aboutsection .sectionimg {
   margin: 50px 0 50px 0;
@@ -732,14 +616,14 @@ button.callToActionButton:hover {
 
 .howtosection {
   border: black none 4px;
+  border-radius: 5px;
   color: black;
   margin-top: 50px;
   text-align: center;
-  width: 100%;
-  width: 90%;
   background-color: #ffb11e;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 
 .sectiontext {
@@ -771,6 +655,21 @@ button.callToActionButton:hover {
   margin-right: 5%;
   margin-bottom: 50px;
   color:white;
+  border-radius: 5px;
+}
+.application h3 {
+  font-size: 16x;
+  font-weight:500;
+  max-width: 50%;
+  text-align: center;
+  translate: 50% 0%;
+}
+.application h4 {
+  font-size: 14x;
+  font-weight:400;
+  max-width: 50%;
+  text-align: center;
+  translate: 50% 0%;
 }
 
 #applicationHeader {
@@ -803,11 +702,11 @@ button.callToActionButton:hover {
   color: white;
   text-decoration: none;
   border: 2px solid white;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   margin-left: 0;
   margin: 25px 0 25px 0;
-  font-weight: bold;
+  font-weight: 500;
   display: inline-block;
   font-size: 30%;
   margin-top: 5px;
@@ -1003,6 +902,24 @@ button.callToActionButton:hover {
     padding: 14px 14px;
     margin: 30px 100px 30px 100px;
     text-align: center;
+    border-radius: 5px;
+  }
+
+  button.dynamicButtonBlack {
+    font-size: 18px;
+    float: center;
+    margin-bottom: 50px;
+    padding: 14px 14px;
+    margin: 30px 100px 30px 100px;
+    text-align: center;
+  }
+  button.dynamicButtonWhite {
+    font-size: 18px;
+    float: center;
+    margin-bottom: 50px;
+    padding: 14px 14px;
+    margin: 30px 100px 30px 100px;
+    text-align: center;
   }
 
   #signupbutton {
@@ -1039,8 +956,7 @@ button.callToActionButton:hover {
   }
 
   .section1 {
-    margin-top: 0;
-    margin-bottom: 0px;
+    margin: 0;
   }
 
   .contacttable .footerheader {
@@ -1057,6 +973,7 @@ button.callToActionButton:hover {
   select,
   textarea {
     width: 80%;
+    border-radius: 5px;
   }
 
   .formitem {
@@ -1192,8 +1109,8 @@ button.callToActionButton:hover {
   color: white;
   font-size: 14px;
   text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
   transition: padding 0.5s;
   transition: background-color 0.5s;
   transition: border 0.5s;
@@ -1310,6 +1227,12 @@ button.callToActionButton:hover {
   font-size: 30px;
   color: black;
   cursor: pointer;
+  font-weight: 500;
+}
+
+.accordionheader {
+  font-size: 36px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1369,10 +1292,12 @@ button.callToActionButton:hover {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  border: 4px none black;
+  border-radius: 5px;
   padding: 20px 20px;
   text-align: center;
   width: 40%;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 30%;
   margin-right: 30%;
 }
@@ -1586,3 +1511,4 @@ label {
   background-size: cover;
   padding: 20px 20px 20px 20px;
 }
+
