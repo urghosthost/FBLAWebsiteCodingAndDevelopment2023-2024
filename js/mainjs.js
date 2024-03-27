@@ -328,10 +328,11 @@ function checkForm() {
   var leaving2 = document.getElementById('leaving2').value;
   var jobDes2 = document.getElementById('jobdes2').value;
   var other = document.getElementById('other').value;
+  var upload = document.getElementById('upload').files.length;
 
   function checkFormInput(id, labelid, enterText, required) {
     if (typeof lName !== "undefined") {
-      if (id == "") {
+      if (id == "" || id == 0) {
         document.getElementById(labelid).innerHTML = enterText;
         submittable = "false";
       }
@@ -434,6 +435,8 @@ function checkForm() {
   checkOptionalFormInput(jobDes2, 'jobdes2label');
 
   checkOptionalFormInput(other, 'otherlabel');
+
+  checkFormInput(upload, 'uploadlabel', "Please upload your resume.");
 
   if (submittable == 'true') {
     return 'true';
