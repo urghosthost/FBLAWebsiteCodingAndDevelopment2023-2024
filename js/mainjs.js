@@ -17,7 +17,23 @@ function myFunction() {
 
 // Function for text typing effect on index page
 var i = 0;
-var txt = "WANT TO JOIN THE AXCELMARK TEAM?";
+var txt;
+
+if(document.URL.includes("index.html")) {
+  txt = "WANT TO JOIN THE AXCELMARK TEAM?";
+}
+else if(document.URL.includes("listings.html")) {
+  txt = "WHICH JOBS DO WE NEED FILLING?";
+}
+else if(document.URL.includes("benefits.html")) {
+  txt = "WHAT BENEFITS DO EMPLOYEES GET?";
+}
+else if(document.URL.includes("application.html")) {
+  txt = "FILL OUT THIS FORM TO APPLY!";
+}
+else if(document.URL.includes("contact.html")) {
+  txt = "WANT TO SPEAK TO US DIRECTLY?";
+}
 var speed = 50; /* The speed/duration of The effect in milliseconds */
 function typeWriter() {
   if (i < txt.length) {
