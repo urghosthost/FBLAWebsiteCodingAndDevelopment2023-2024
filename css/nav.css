@@ -154,3 +154,9 @@ header {
   color: black;
   transition: background-color 0.5s;
 }
+
+@media screen and (max-width: 380px) {
+  #mobileimage {
+    width: 275px
+  }
+}

@@ -82,13 +82,32 @@ body {
 
 input[type="text"],
 select,
-textarea {
+textarea
+{
   padding: 10px 10px 10px 3px;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  border: black none 2px;
+  border: #302f2f solid 4px;
   border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  background-color:#1c1c1c;
+  color: white;
+  font-size: 18px;
+}
+
+input[type='file'] {
+  text-align: center;
+  padding: 10px 10px 10px 3px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: #302f2f solid 4px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  background-color:#1c1c1c;
+  color: white;
+  font-size: 18px;
 }
 
 .contactinfo {
@@ -101,6 +120,7 @@ textarea {
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
+
   background-color: black;
   width: 33.33333333%;
   margin-left: 33.3333333%;
@@ -109,17 +129,22 @@ textarea {
   padding-bottom: 15px;
   margin-top: 25px;
   margin-bottom: 25px;
+  border: 4px none black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  
+  border-radius: 5px;
 }
 
+
 #signupbutton {
-  background-color: transparent;
-  color: white;
+  background-color: white;
+  color: black;
   text-decoration: none;
   border: 2px solid white;
   font-size: 12px;
   font-weight: 500;
   text-align: center;
   margin-left: auto;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   margin-right: auto;
   font-size: 28px;
 }
@@ -159,6 +184,7 @@ a.footerlink:link {
   text-decoration: none;
   text-align: left;
 }
+
 
 a.footerlink:hover {
   color: white;
@@ -221,42 +247,48 @@ td {
 }
 
 button.callToActionButton {
-  background-color: transparent;
+  background-color: black;
   display: block;
   padding: 20px 20px;
-  color: black;
+  color: white;
   text-decoration: none;
   border: 2px solid black;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   margin-left: 0;
   margin: 25px 0 25px 0;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border-radius: 5px;
-  font-weight: 500;
+  font-weight: 500
+
 }
 
 button.callToActionButton:hover {
   background-color: black;
-  padding: 24px 24px;
+  padding: 25px 25px;
   color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;  
   transition: background-color 0.5s;
+  
   transition: color 0.5s;
-  transition: padding 0.25s;
+  transition: margin-top 0.5s;
+  transition: padding 0.5s;
 
   cursor: pointer;
   content: " -> ";
 }
 
 button.dynamicButtonBlack {
-  color: black;
-  background-color: transparent;
+  color: white;
+  background-color: black;
   display: block;
   padding: 20px 20px;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border: 2px solid black;
   font-size: 15px;
-  margin-left: 0;
   margin: 25px 0 25px 0;
   border-radius: 5px;
   font-weight: 500;
@@ -265,20 +297,24 @@ button.dynamicButtonBlack {
 button.dynamicButtonBlack:hover {
   background-color: black;
   color: white;
-  padding: 24px 24px;
+  padding: 25px 25px;
+  margin-top: 20px;
   transition: background-color 0.5s;
   transition: color 0.5s;
-  transition: padding 0.25s;
+  transition: margin-top 0.5s;
+  transition: padding 0.5s;
+  
 
 }
 
 button.dynamicButtonWhite{
-  color: white;
-  background-color: transparent;
+  color: black;
+  background-color: white;
   display: block;
   padding: 20px 20px;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border: 2px solid white;
   font-size: 15px;
   margin-left: 0;
@@ -290,10 +326,15 @@ button.dynamicButtonWhite{
 button.dynamicButtonWhite:hover {
   background-color: white;
   color: black;
-  padding: 24px 24px;
+  padding: 25px 25px;
   transition: background-color 0.5s;
   transition: color 0.5s;
   transition: padding 0.25s;
+  margin-top: 20px;
+  transition: background-color 0.5s;
+  transition: color 0.5s;
+  transition: margin-top 0.5s;
+  transition: padding 0.5s;
 
 }
 
@@ -461,6 +502,7 @@ button.dynamicButtonWhite:hover {
   color: black;
   border: gray rounded 2 px;
   border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .categorybutton:hover {
@@ -602,6 +644,7 @@ button.dynamicButtonWhite:hover {
   width: 95%;
   margin-left: 2.5%;
   margin-right: 2.5%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 
@@ -624,6 +667,7 @@ button.dynamicButtonWhite:hover {
   width: 95%;
   margin-left: 2.5%;
   margin-right: 2.5%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .sectiontext {
@@ -681,6 +725,10 @@ button.dynamicButtonWhite:hover {
   margin-bottom: 50px;
 }
 
+#benefits {
+  margin-bottom: 50px;
+}
+
 #desktoplayoutsection {
   display: inline;
 }
@@ -689,7 +737,7 @@ button.dynamicButtonWhite:hover {
   float: center;
   width: 100%;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .sectionimg {
     width: 350px;
   }
@@ -730,6 +778,7 @@ button.dynamicButtonWhite:hover {
     background-image: url(../images/indexfrontimagemobile.webp);
     background-size: auto;
   }
+
 
   #whoAreWeImg {
     margin: 0 0 0 0;
@@ -870,11 +919,17 @@ button.dynamicButtonWhite:hover {
   .howtosection {
     width: 100%;
     margin: 0;
+    border-radius: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px; 
   }
 
   .aboutsection {
     margin: 0;
     width: 100%;
+    border-radius: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px; 
   }
 
   td#sectionimg.sectionbox {
@@ -954,6 +1009,10 @@ button.dynamicButtonWhite:hover {
   #listings {
     margin-bottom: 0;
   }
+  
+  #benefits {
+    margin-bottom: 0;
+  }
 
   .section1 {
     margin: 0;
@@ -971,7 +1030,11 @@ button.dynamicButtonWhite:hover {
 
   input[type="text"],
   select,
-  textarea {
+  textarea, {
+    width: 80%;
+    border-radius: 5px;
+  }
+  input[type='file'] {
     width: 80%;
     border-radius: 5px;
   }
@@ -1278,7 +1341,7 @@ button.dynamicButtonWhite:hover {
 }
 
 .accordion .acccontainer.accactive .acccontent {
-  height: 75px;
+  height: 105px;
 }
 
 .accordion .acccontainer.accactive .acclabel::before {
@@ -1292,6 +1355,7 @@ button.dynamicButtonWhite:hover {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   border: 4px none black;
   border-radius: 5px;
   padding: 20px 20px;
@@ -1452,7 +1516,11 @@ h4#tutSection {
   }
 
   .section1 .textcentered p {
-    font-size: 24px;
+    font-size: 30px;
+  }
+  .textmainheader {
+    max-width: 400px;
+    margin: auto;
   }
 
   .section2text {
@@ -1505,10 +1573,17 @@ label {
 
 .firstfooter {
   background-image: url("../images/clothingBackground.webp");
-  height: 250px;
+  height: 315px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   padding: 20px 20px 20px 20px;
+  
+}
+@media screen and (max-width: 800px) {
+  .firstfooter {
+    height: 275px;
+    
+  }
 }
 
