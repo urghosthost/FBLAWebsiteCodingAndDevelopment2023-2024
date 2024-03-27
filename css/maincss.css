@@ -700,6 +700,7 @@ button.dynamicButtonWhite:hover {
   margin-bottom: 50px;
   color:white;
   border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  
 }
 .application h3 {
   font-size: 16x;
@@ -1030,13 +1031,35 @@ button.dynamicButtonWhite:hover {
 
   input[type="text"],
   select,
-  textarea, {
-    width: 80%;
+  textarea {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     border-radius: 5px;
   }
   input[type='file'] {
-    width: 80%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     border-radius: 5px;
+  }
+  .application h3 {
+    font-size: 16x;
+    font-weight:500;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    translate: none;
+  }
+  .application h4 {
+    font-size: 14x;
+    font-weight:400;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    translate: none;
   }
 
   .formitem {
