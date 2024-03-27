@@ -34,6 +34,9 @@ else if(document.URL.includes("application.html")) {
 else if(document.URL.includes("contact.html")) {
   txt = "WANT TO SPEAK TO US DIRECTLY?";
 }
+else {
+  txt = "WANT TO JOIN THE AXCELMARK TEAM?";
+}
 var speed = 50; /* The speed/duration of The effect in milliseconds */
 function typeWriter() {
   if (i < txt.length) {
