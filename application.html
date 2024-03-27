@@ -20,7 +20,7 @@
     
 </head>
 
-<body>
+<body onload="typeWriter()">
     <header>
         <!--Desktop Navigation Bar-->
         <div class="navbar" id="navbar">
@@ -54,13 +54,19 @@
         </div>
     </header>
     <!--Page Header/Title-->
-    <div class="applyDescription" id="applicationHeader">
-        <h1>APPLICATION</h1>
-
-    </div>
+    <div class="section1" id="fadeIn">
+        <picture>
+            <source srcset="images/applicationfrontimage.webp" media="(min-width: 701px)">
+            <img src="images/applicationfrontimagemobile.webp" class="section1img" alt="Shirts"
+                style="width:100%; border: none;" alt="Background with t-shirts">
+        </picture>
+        <div class="textcentered" id="textcentered">
+            <p class="textmainheader" style="margin-top:15px" id="typeText"></p>
+        </div>
+        </div>
 
     <!--Application Form-->
-    <div class="application animate__animated" style="text-align: center;" id="fadeInleft">
+    <div class="application" style="text-align: center;" id="fadeInLeft">
         <form id="myForm">
             <table class="applicationtable">
                 <tr>
@@ -262,8 +268,13 @@
                             <h4>Please list any other jobs, leadership roles, certifications or experiences that you
                                 would like the hiring manager to consider</h4>
                         </label>
-                        <textarea id="other" name="other" rows="11" cols="5"></textarea>
+                        <textarea id="other" name="other" rows="6" cols="5"></textarea>
                         <label for="other" id="otherlabel"></label>
+                        <label for="file">
+                            Please upload a file for your resume.
+                        </label>
+                        <input type="file" id="myFile" name="filename">
+                        <label for="file" id="filelabel"></label>
                     </td>
                 </tr>
             </table>
@@ -276,14 +287,14 @@
     </div>
 
     <!--Click here to apply button at end of page-->
-    <div class=" firstfooter">
-                        <div class="signup">
-                            <button id="signupbutton" class="callToActionButton"
-                                onclick="document.location='application.html'" style="display:inline-block;">CLICK HERE
-                                TO APPLY</button>
-                        </div>
+    <div class="firstfooter">
+        <div class="signup">
+            <h1 class="sectionheader" style="text-align: center;">FEEL LIKE APPLYING?</h1>
+            <button id="signupbutton" class="callToActionButton" onclick="document.location='application.html'"
+                style="display:inline-block;">CLICK HERE TO APPLY</button>
+        </div>
     </div>
-    </div>
+</div>
 
     <!--Footer-->
     <footer>

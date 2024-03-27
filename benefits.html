@@ -8,32 +8,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Do you want to work at a marketing product business? Apply to Axcelmark today!">
     <script src="https://kit.fontawesome.com/ef4fd3eeca.js" crossorigin="anonymous"></script>
-    <script src="js/mainjs.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="" crossorigin="anonymous"></script>
+    <!--Import for main js script-->
+    <script src="js/mainjs.js" type="text/javascript"></script>
+    
+    
 </head>
 
-<body>
+<body onload="typeWriter();">
     <header>
-        <!--Desktop Navigation Bar-->
+        <!-- Desktop navigation bar -->
         <div class="navbar" id="navbar">
             <ul>
                 <li style="float: left;"><a href="index.html" id="navlogo"><img src="images/AxcelmarkLogo.webp"
                             style="height: 65px;" alt="Axcelmark Logo" /></a></li>
                 <li style="float: right;"><a href="contact.html" id="navbutton">HELP</a></li>
-                <li style="float: right;"><a href="application.html" id="navbutton">APPLICATION</a></li>
-                <li style="float: right;"><a href="application.html" id="navbutton" class="active">BENEFITS</a></li>
-                <li style="float: right;"><a href="listings.html" id="navbutton">LISTINGS</a></li>
+                <li style="float: right;"><a href="application.html" id="navbutton">APPLICATION</a>
+                </li>
+                <li style="float: right;"><a href="benefits.html"  class="active" id="navbutton">BENEFITS</a></li>     
+                <li style="float: right;"><a href="listings.html" id="navbutton"
+                        >LISTINGS</a></li>
                 <li style="float: right;"><a href="index.html" id="navbutton">HOME</a></li>
             </ul>
-        </div>
 
-        <!--Mobile Navigation Bar-->
+        </div>
+        <!-- Mobile navigation bar-->
         <div class="mobilenav">
             <a href="index.html" id="mobileimage"><img id="mobileimage" src="images/AxcelmarkLogo.webp"
                     style="height:50px; " alt="Axcelmark Logo" /></a>
             <div id="myLinks">
                 <a href="index.html" style="color: white; ">HOME</a>
-                <a href="listings.html" style="color:white;">LISTINGS</a>
+                <a href="listings.html"  style="color:white;">LISTINGS</a>
                 <a href="benefits.html" class="active" style="color:white;">BENEFITS</a>
                 <a href="application.html" style="color:white;">APPLICATION</a>
                 <a href="contact.html" style="color: white;">HELP</a>
@@ -41,18 +48,58 @@
             <a href="#" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars" style="width:50px; height: 37px;margin-top: 35%;color:white;"></i>
             </a>
-        </div>
-      </header>
-      <div id="benefits">
-        <div class="applyDescription" style="margin-top: 25px;">
-          <h1>BENEFITS</h1>
-        </div>
-      </div>
-      <script>
-        section('benefits', '#800020', 0, 'fadeInLeft' ,"images/customerserviceImage.webp", "Image of customer service person", 'left', 'OVERTIME', "Do you want to be a Customer Service Representative for a dynamic and vibrant custom T-shirt printing company? In this role, you will be responsible for handling orders, answering phone calls, addressing inquiries, and ensuring seamless communication between the company and our clients. We are looking for individuals with excellent communication skills to become a part of our creative team. At Axcelmark, we offer a starting salary of $13.50 per hour, along with opportunities for growth, a supportive work culture, and other exciting perks. Don't miss out on this chance to be a part of a growing company in a thriving industry!", 'CLICK HERE TO APPLY!', "application.html?option=customerservice");
-      </script>
-    <!--Import for main js script-->
-    
-</body>
 
-</html>
+        </div>
+    </header>
+    
+    <div id="benefits">
+      <!-- Section 1: Title Section -->
+    <div class="section1" id="fadeIn">
+      <picture>
+          <source srcset="images/benefitsfrontimage.webp" media="(min-width: 701px)">
+          <img src="images/benefitsfrontimagemobile.webp" class="section1img" alt="Shirts"
+              style="width:100%; border: none;" alt="Background with t-shirts">
+      </picture>
+      <div class="textcentered" id="textcentered">
+          <p class="textmainheader" style="margin-top:15px" id="typeText"></p>
+      </div>
+  </div>
+    </div>
+    <script>    
+        section('benefits', '#b50202', 0, 'fadeInLeft',"images/customerserviceImage.webp", "Image of customer service person", 'left', 'OVERTIME', "At AxcelMark, we deeply appreciate the dedication and hard work you bring to our team. To honor this commitment, we've established comprehensive overtime benefits that acknowledge and reward your additional efforts. When you extend your work beyond the regular schedule, you're not only compensated at a premium rate but also earn time towards extra days off. This system is our way of ensuring that your hard work translates into both financial rewards and opportunities for rest and rejuvenation. We're dedicated to maintaining a balance where your extraordinary efforts are matched with equally rewarding benefits, keeping our team motivated and vibrant. At AxcelMark, going the extra mile is always recognized and valued, both in your paycheck and your personal life.", 'CLICK HERE TO APPLY!', "application.html");
+        section('benefits', '#800020', 0, 'fadeInRight',"images/managerImage.webp", "Image of a manager", 'right', 'MATERNAL/PATERNAL LEAVE', "At AxcelMark, we are deeply committed to supporting our employees through all of life’s stages, especially during the transformative experience of becoming a parent. We recognize the irreplaceable value of the early bonding period between parents and their newborns. That’s why we offer a comprehensive maternity and paternity leave policy. Eligible employees can benefit from paid leave, allowing them to dedicate time to their family’s needs without financial concerns. This policy is a direct reflection of AxcelMark’s core values and our investment in the well-being of our employees’ families. In turn, this commitment contributes to a more engaged and content workforce. By providing support during such a crucial life event, we foster a culture of compassion and respect that is fundamental to the spirit of AxcelMark.", 'CLICK HERE TO APPLY!', "application.html");
+        section('benefits', '#ff7420', 1, 'fadeInLeft',"images/screenprinting4.webp", "Image of screen printing job", 'left', 'FLEXIBLE SCHEDULE', "At AxcelMark, we recognize that there’s more to life than work. That’s why we’ve implemented a flexible scheduling system that enables our employees to customize their work hours to suit their unique lifestyles. Whether it’s for attending a child’s recital, pursuing further education, or enjoying a tranquil morning jog, our policy supports our team in achieving a harmonious work-life balance. This level of autonomy not only boosts job satisfaction and overall well-being but also cultivates a culture of trust and accountability. By respecting individual scheduling preferences, AxcelMark ensures that while work is a significant aspect of our lives, it enhances rather than hinders personal development and joy.", 'CLICK HERE TO APPLY!', "application.html");
+        section('benefits', '#ffb11e', 1, 'fadeInRight',"images/managerImage.webp", "Image of a manager", 'right', 'PAID VACATION TIME', "At AxcelMark, we’re proud to offer you a flexible schedule that acknowledges the diverse needs and rhythms of our team members. We believe that empowering you to choose your working hours fosters a culture of trust and respect. This flexibility allows you to align your work with your most productive times and personal responsibilities, ensuring that you can give your best without compromising on your life outside of work. Joining AxcelMark means joining a forward-thinking community that supports your professional growth while honoring your personal time. We’re not just a company; we’re a community that thrives on the balance and well-being of each individual.", 'CLICK HERE TO APPLY!', "application.html");    
+        
+    </script>
+
+    <!--Click here to apply button at end of page-->
+    <div class="firstfooter">
+        <div class="signup">
+            <h1 class="sectionheader" style="text-align: center;">FEEL LIKE APPLYING?</h1>
+            <button id="signupbutton" class="callToActionButton" onclick="document.location='application.html'"
+                style="display:inline-block;">CLICK HERE TO APPLY</button>
+        </div>
+    </div>
+</div>
+
+    <!--Footer-->
+    <footer>
+        <div class="footerrow">
+            <h3>CONNECT WITH US</h3>
+        </div>
+        <div class="footerrow">
+            <ul class="social-links">
+                <li><a href="mailto:cstewart@axcelmark.com" aria-label="mail contact info"><i
+                            class="fa-regular fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="footerrow">
+            <p>
+                <a id="copyrightLink" href="copyright.html">&copy;Copyright Axcelmark Official. All rights reserved.</a>
+            </p>
+        </div>
+        <script src="js/animation.js" type="text/javascript"></script>
+    </footer>
+    </body>
+    </html> 
