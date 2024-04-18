@@ -20,8 +20,10 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.backgroundColor = 'rgba(36,35,34, 0.7)';
+    document.getElementById("navbar").style.backgroundColor = 'rgba(36,35,34, 0.75)';
+    
   } else {
+    
     document.getElementById("navbar").style.backgroundColor = 'rgba(36,35,34, 1)';
   }
 }
