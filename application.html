@@ -10,14 +10,14 @@
     <script src="https://kit.fontawesome.com/ef4fd3eeca.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="" crossorigin="anonymous"></script>
     <!--Import for main js script-->
     <script src="js/mainjs.js" type="text/javascript"></script>
-    
-    
+
+
 </head>
 
 <body onload="typeWriter()">
@@ -28,9 +28,8 @@
                 <li style="float: left;"><a href="index.html" id="navlogo"><img src="images/AxcelmarkLogo.webp"
                             style="height: 65px;" alt="Axcelmark Logo" /></a></li>
                 <li style="float: right;"><a href="contact.html" id="navbutton">HELP</a></li>
-                <li style="float: right;"><a href="application.html" id="navbutton"
-                        class="active">APPLICATION</a></li>
-                <li style="float: right;"><a href="benefits.html" id="navbutton">BENEFITS</a></li>        
+                <li style="float: right;"><a href="application.html" id="navbutton" class="active">APPLY</a></li>
+                <li style="float: right;"><a href="benefits.html" id="navbutton">BENEFITS</a></li>
                 <li style="float: right;"><a href="listings.html" id="navbutton">LISTINGS</a></li>
                 <li style="float: right;"><a href="index.html" id="navbutton">HOME</a></li>
             </ul>
@@ -44,7 +43,7 @@
                 <a href="index.html" style="color: white; ">HOME</a>
                 <a href="listings.html" style="color:white;">LISTINGS</a>
                 <a href="benefits.html" style="color:white;">BENEFITS</a>
-                <a href="application.html" class="active" style="color:white;">APPLICATION</a>
+                <a href="application.html" class="active" style="color:white;">APPLY</a>
                 <a href="contact.html" style="color: white;">HELP</a>
             </div>
             <a href="#" class="icon" onclick="myFunction()">
@@ -57,13 +56,13 @@
     <div class="section1" id="fadeIn">
         <picture>
             <source srcset="images/applicationfrontimage.webp" media="(min-width: 701px)">
-            <img src="images/applicationfrontimagemobile.webp" class="section1img" alt="Shirts"
+            <img src="images/applicationfrontimage.webp" class="section1img" alt="Shirts"
                 style="width:100%; border: none;" alt="Background with t-shirts">
         </picture>
         <div class="textcentered" id="textcentered">
             <p class="textmainheader" style="margin-top:15px" id="typeText"></p>
         </div>
-        </div>
+    </div>
 
     <!--Application Form-->
     <div class="application" style="text-align: center;" id="fadeInLeft">
@@ -253,7 +252,7 @@
                         </label>
                         <input type="text" id="state2" name="state2"><br>
                         <label for="state2" id="state2label"> </label>
-                        <label for="leaving2" >
+                        <label for="leaving2">
                             <h4>Reason For Leaving:</h4>
                         </label>
                         <input type="text" id="leaving2" name="leaving2"><br>
@@ -281,20 +280,22 @@
         </form>
         <tr style="padding-bottom: 100px;">
             <td>
-                <p style="padding-bottom:25px;"><button class="formSubButton" type="submit" onclick="SubForm();" ">SUBMIT</button></p></td></tr>
-            
-        
+                <p style="padding-bottom:25px;"><button class="formSubButton" type="submit"
+                        onclick="SubForm();">SUBMIT</button></p>
+            </td>
+        </tr>
+
     </div>
 
     <!--Click here to apply button at end of page-->
     <div class="firstfooter">
-        <div class="signup">
+        <div class="applyfooter">
             <h1 class="sectionheader" style="text-align: center;">FEEL LIKE APPLYING?</h1>
-            <button id="signupbutton" class="callToActionButton" onclick="document.location='application.html'"
+            <button id="applybutton" class="dynamicButtonWhite" onclick="document.location='application.html'"
                 style="display:inline-block;">CLICK HERE TO APPLY</button>
         </div>
     </div>
-</div>
+    </div>
 
     <!--Footer-->
     <footer>
