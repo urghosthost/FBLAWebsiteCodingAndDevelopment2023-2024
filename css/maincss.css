@@ -15,7 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/*Creates main basis for body coloring */
+/* Creates main basis for body coloring */
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -23,10 +23,10 @@ body {
   border: gray none 4px;
   margin: 0;
   background-color: rgb(231, 231, 231);
-  
+
 }
 
-/*Desktop CSS for .section1 class*/
+/* Desktop CSS for .section1 class */
 .section1 {
   position: relative;
   text-align: center;
@@ -36,54 +36,34 @@ body {
   border: gray none 4px;
   border: none;
   font-weight: 600;
-  
-  
-}
-.animate__delay-2s{
-  --animation-delay: 0.5s;
-} 
 
-.sectionimg {
-  width: 450px;
+
 }
 
-/*Desktop CSS for .section1 class images*/
-.section1img {
-  background-image: url(../images/indexfrontimage.webp);
-  background-size: auto;
-  width: 100%;
-  height: auto;
-}
-
-/*Main CSS for text centered section*/
+/* Main CSS for text centered section */
 .textcentered {
   border: none;
   position: absolute;
   top: 50%;
   left: 50%;
   animation-duration: 0.5s;
-  width: 100%; 
+  width: 100%;
   font-size: 45px;
   transform: translate(-50%, -50%);
   border: gray none 4px;
 }
 
 
-/*Main CSS for section images*/
+/* Desktop CSS for current listings buttons */
 .categorybuttonimg {
   width: 175px;
   padding: 35px;
 }
 
-#message {
-  width: 300px;
-  height: 200px;
-}
-
+/* Desktop CSS for text based input fields for form */
 input[type="text"],
 select,
-textarea
-{
+textarea {
   padding: 10px 10px 10px 3px;
   width: 80%;
   margin-left: 10%;
@@ -91,11 +71,12 @@ textarea
   border: #302f2f solid 4px;
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
-  background-color:#1c1c1c;
+  background-color: #1c1c1c;
   color: white;
   font-size: 18px;
 }
 
+/* Desktop CSS for file upload input field for form  */
 input[type='file'] {
   text-align: center;
   padding: 10px 10px 10px 3px;
@@ -105,22 +86,17 @@ input[type='file'] {
   border: #302f2f solid 4px;
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
-  background-color:#1c1c1c;
+  background-color: #1c1c1c;
   color: white;
   font-size: 18px;
 }
 
-.contactinfo {
-  text-align: center;
-  font-size: 24px;
-}
-
-.signup {
+/* Desktop CSS for 'Click here to apply' footer at the bottom of the page */
+.applyfooter {
   color: white;
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
-
   background-color: black;
   width: 33.33333333%;
   margin-left: 33.3333333%;
@@ -130,12 +106,12 @@ input[type='file'] {
   margin-top: 25px;
   margin-bottom: 25px;
   border: 4px none black;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
 }
 
-
-#signupbutton {
+/* Desktop CSS for button of 'Click here to apply' footer at the bottom of the page */
+#applybutton {
   background-color: white;
   color: black;
   text-decoration: none;
@@ -144,141 +120,13 @@ input[type='file'] {
   font-weight: 500;
   text-align: center;
   margin-left: auto;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-right: auto;
   font-size: 28px;
 }
 
-.quicklinks {
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-td.quicklinks {
-  padding-top: 100px;
-  margin-bottom: 100px;
-  padding-left: 109px;
-}
-
-a.footerlink {
-  padding-left: 50px;
-  margin-top: 10px;
-}
-
-@media screen and (max-width: 800px) {
-  a.footerlink {
-    padding-left: 0px;
-    padding-top: 0px;
-  }
-
-  .quicklinks {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-a.footerlink:link {
-  color: white;
-  text-decoration: none;
-  text-align: left;
-}
-
-
-a.footerlink:hover {
-  color: white;
-  text-decoration: underline;
-  text-align: left;
-}
-
-a.footerlink:visited {
-  color: white;
-  text-decoration: underline;
-  text-align: left;
-}
-
-.footerlink {
-  font-size: 20px;
-  margin: 30px 0px 30px 0px;
-  text-align: left;
-}
-
-.footer th,
-td {
-  padding: 10px 0px 30px 10px;
-  height: 40px;
-}
-
-.signup th,
-td {
-  padding: 5px 0px 5px 0px;
-  height: 20px;
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  height: 0;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-}
-
-.embed-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  width: 50%;
-  aspect-ratio: 16 / 9;
-  float: left;
-}
-
-button.callToActionButton {
-  background-color: black;
-  display: block;
-  padding: 20px 20px;
-  color: white;
-  text-decoration: none;
-  border: 2px solid black;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  margin-left: 0;
-  margin: 25px 0 25px 0;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  border-radius: 5px;
-  font-weight: 500
-
-}
-
-button.callToActionButton:hover {
-  background-color: black;
-  padding: 25px 25px;
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 20px;  
-  transition: background-color 0.5s;
-  
-  transition: color 0.5s;
-  transition: margin-top 0.5s;
-  transition: padding 0.5s;
-
-  cursor: pointer;
-  content: " -> ";
-}
-
+/* Desktop CSS for call to action buttons throughout all pages */
+/* Black version */
 button.dynamicButtonBlack {
   color: white;
   background-color: black;
@@ -286,7 +134,7 @@ button.dynamicButtonBlack {
   padding: 20px 20px;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 2px solid black;
   font-size: 15px;
   margin: 25px 0 25px 0;
@@ -294,6 +142,7 @@ button.dynamicButtonBlack {
   font-weight: 500;
 }
 
+/* Hover for black version */
 button.dynamicButtonBlack:hover {
   background-color: black;
   color: white;
@@ -303,18 +152,17 @@ button.dynamicButtonBlack:hover {
   transition: color 0.5s;
   transition: margin-top 0.5s;
   transition: padding 0.5s;
-  
-
 }
 
-button.dynamicButtonWhite{
+/* White version */
+button.dynamicButtonWhite {
   color: black;
   background-color: white;
   display: block;
   padding: 20px 20px;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 2px solid white;
   font-size: 15px;
   margin-left: 0;
@@ -323,6 +171,7 @@ button.dynamicButtonWhite{
   font-weight: 500;
 }
 
+/* Hover for white version */
 button.dynamicButtonWhite:hover {
   background-color: white;
   color: black;
@@ -335,163 +184,30 @@ button.dynamicButtonWhite:hover {
   transition: color 0.5s;
   transition: margin-top 0.5s;
   transition: padding 0.5s;
-
 }
 
-#shopallbutton {
-  background-color: transparent;
-  display: block;
-  padding: 20px 20px;
-  color: gray;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  margin-top: 25px;
-  margin-left: 100px;
-  margin-right: 100px;
-  font-weight: 500;
-  border: none;
-}
-
-#aboutButton {
-  background-color: transparent;
-  display: block;
-  padding: 20px 20px;
-  color: black;
-  text-decoration: none;
-  border: 2px solid black;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  margin-left: 0;
-  margin: 25px 0 25px 0;
-  font-weight: 500;
-}
-
-#newButton {
-  background-color: transparent;
-  display: block;
-  padding: 20px 20px;
-  color: black;
-  text-decoration: none;
-  border: 2px solid black;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  margin-left: 0;
-  margin: 25px 0 25px 0;
-  font-weight: 500;
-}
-
-#shopallbutton:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-#aboutButton:hover {
-  background-color: black;
-  padding: 24px 24px;
-  color: white;
-  transition: color 0.5s;
-  transition: padding 0.25s;
-  cursor: pointer;
-  content: " -> ";
-}
-
-#newButton:hover {
-  background-color: black;
-  padding: 24px 24px;
-  color: white;
-  transition: color 0.5s;
-  transition: padding 0.25s;
-  cursor: pointer;
-  content: " -> ";
-}
-
+/* Desktop CSS for Section Box Padding */
 .sectionbox {
   padding: 0px 150px 0px 150px;
 }
 
-@media screen and (max-width: 1400px) {
+/* Change size of elements based on width being 1200px or less */
+@media screen and (max-width: 1200px) {
+
+  /* Category button image changes by smaller width and less padding when width is 1200px or less */
   .categorybuttonimg {
     width: 110px;
     padding: 22.5px;
   }
-
-  .sectionbox {
-    padding: 0px 100px 0px 100px;
-  }
-}
-
-.categorySelector {
-  background-color: #356b67;
-  padding-top: 5px;
-  margin-bottom: 5px;
-  font-size: 32px;
-  text-align: center;
-  width: 100%;
-  color: white;
-  height: 78px;
-}
-
-@media screen and (max-width: 1200px) {
-  .categorybuttonimg {
-    width: 110px;
-    padding: 22.5px;
-  }
-
-  .sectionbox {
-    padding: 0px 75px 0px 75px;
-  }
-
-  p#catHead {
-    font-size: 18px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .categorySelector {
-    height: 115px;
-  }
-
-  .productText {
-    max-width: 500px;
-    text-align: left;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    font-size: 12px;
-  }
-
-  #price {
-    font-size: 14px;
-  }
-
-  button#catButton {
-    float: none;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 12px 16px;
-  }
-}
-
-#productLink:link {
-  color: white;
-  text-decoration: none;
-}
-
-#productLink:visited {
-  color: white;
-  text-decoration: none;
-}
-
-@media screen and (max-width: 1200px) {
   .sectionbox {
     padding: 0px 25px 0px 25px;
   }
-
   .sectiontext {
     font-size: 15px;
   }
 }
 
+/* Desktop main CSS for category/listing buttons */
 .categorybutton {
   background-color: #ff7420;
   margin: 0% 16.67% 0% 16.67%;
@@ -502,7 +218,7 @@ button.dynamicButtonWhite:hover {
   color: black;
   border: gray rounded 2 px;
   border-radius: 5px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .categorybutton:hover {
@@ -510,9 +226,6 @@ button.dynamicButtonWhite:hover {
   transition: background-color 0.5s;
   cursor: pointer;
 }
-
-
-
 
 .footerheader {
   font-size: 32px;
@@ -523,12 +236,13 @@ button.dynamicButtonWhite:hover {
   margin-bottom: 0px;
   padding: 20px 20px;
   border: 2px none #b50202;
-  background-color: #b50202;
+  background-color: black;
   color: white;
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
 }
 
@@ -546,79 +260,6 @@ button.dynamicButtonWhite:hover {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-#popup {
-  background-color: #214341;
-  color: white;
-  width: 420px;
-  padding: 30px 40px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  border-radius: 8px;
-  display: none;
-  text-align: center;
-  position: fixed;
-}
-
-#popup button {
-  display: block;
-  margin: 0 0 20px auto;
-  background-color: transparent;
-  font-size: 30px;
-  color: #ffffff;
-  background: #1f9b92;
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-#popup h2 {
-  margin-top: -20px;
-}
-
-#popup p {
-  font-size: 14px;
-  text-align: justify;
-  margin: 20px 0;
-  line-height: 25px;
-}
-
-#popup a {
-  display: block;
-  width: 150px;
-  position: relative;
-  margin: 10px auto;
-  text-align: center;
-  background-color: #ffffff;
-  border-radius: 20px;
-  color: #15c196;
-  text-decoration: none;
-  padding: 8px 0;
-}
-
-.imggallery {
-  float: left;
-}
-
-.imgcolumn {
-  float: left;
-  height: 33px;
-}
-
-.imgcolumn img {
-  opacity: 0.7;
-  cursor: pointer;
-  width: 33%;
-}
-
-.imgcolumn img:hover {
-  opacity: 1;
 }
 
 .container {
@@ -644,7 +285,7 @@ button.dynamicButtonWhite:hover {
   width: 95%;
   margin-left: 2.5%;
   margin-right: 2.5%;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -667,7 +308,7 @@ button.dynamicButtonWhite:hover {
   width: 95%;
   margin-left: 2.5%;
   margin-right: 2.5%;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .sectiontext {
@@ -698,20 +339,22 @@ button.dynamicButtonWhite:hover {
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 50px;
-  color:white;
+  color: white;
   border-radius: 5px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .application h3 {
   font-size: 16x;
-  font-weight:500;
+  font-weight: 500;
   max-width: 50%;
   text-align: center;
   translate: 50% 0%;
 }
+
 .application h4 {
   font-size: 14x;
-  font-weight:400;
+  font-weight: 400;
   max-width: 50%;
   text-align: center;
   translate: 50% 0%;
@@ -733,11 +376,13 @@ button.dynamicButtonWhite:hover {
 #desktoplayoutsection {
   display: inline;
 }
+
 .applicationtable {
-  text-align:center;
+  text-align: center;
   float: center;
   width: 100%;
 }
+
 @media screen and (max-width: 900px) {
   .sectionimg {
     width: 350px;
@@ -776,7 +421,6 @@ button.dynamicButtonWhite:hover {
     height: 300px;
     object-fit: cover;
     object-position: 50% 50%;
-    background-image: url(../images/indexfrontimagemobile.webp);
     background-size: auto;
   }
 
@@ -797,12 +441,13 @@ button.dynamicButtonWhite:hover {
     width: 85px;
     padding: 15px;
   }
+
   #categorybuttonheader {
     width: 80px
   }
 
   .textmainheader {
-    font-size: 24px;
+    font-size: 36px;
   }
 
   .categorybutton {
@@ -864,10 +509,12 @@ button.dynamicButtonWhite:hover {
 
   .application {
     margin-top: 0px;
-    margin-bottom: 25px;
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin-bottom: 0px;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    border-radius: 0px;
+    box-shadow: none;
   }
 
   .applicationtable {
@@ -922,7 +569,7 @@ button.dynamicButtonWhite:hover {
     margin: 0;
     border-radius: 0px;
     margin-top: 0px;
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
   }
 
   .aboutsection {
@@ -930,7 +577,7 @@ button.dynamicButtonWhite:hover {
     width: 100%;
     border-radius: 0px;
     margin-top: 0px;
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
   }
 
   td#sectionimg.sectionbox {
@@ -939,19 +586,19 @@ button.dynamicButtonWhite:hover {
   }
 
   #typeText {
-    font-size: 26px;
-    max-width: 80%;
+    font-size: 32px;
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .signup {
+  .applyfooter {
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
   }
 
-  button.callToActionButton {
+  button.dynamicButtonWhite {
     font-size: 18px;
     float: center;
     margin-bottom: 50px;
@@ -969,6 +616,7 @@ button.dynamicButtonWhite:hover {
     margin: 30px 100px 30px 100px;
     text-align: center;
   }
+
   button.dynamicButtonWhite {
     font-size: 18px;
     float: center;
@@ -978,7 +626,7 @@ button.dynamicButtonWhite:hover {
     text-align: center;
   }
 
-  #signupbutton {
+  #applybutton {
     font-size: 20px;
   }
 
@@ -1010,7 +658,7 @@ button.dynamicButtonWhite:hover {
   #listings {
     margin-bottom: 0;
   }
-  
+
   #benefits {
     margin-bottom: 0;
   }
@@ -1037,24 +685,27 @@ button.dynamicButtonWhite:hover {
     margin-right: 5%;
     border-radius: 5px;
   }
+
   input[type='file'] {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 5px;
   }
+
   .application h3 {
     font-size: 16x;
-    font-weight:500;
+    font-weight: 500;
     max-width: 90%;
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
     translate: none;
   }
+
   .application h4 {
     font-size: 14x;
-    font-weight:400;
+    font-weight: 400;
     max-width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -1101,7 +752,7 @@ button.dynamicButtonWhite:hover {
   }
 
   .textmainheader {
-    font-size: 17px;
+    font-size: 36px;
   }
 
   li.sectiontext {
@@ -1134,7 +785,7 @@ button.dynamicButtonWhite:hover {
   color: #fffeab;
 }
 
-.productCard:hover ~ #productStars {
+.productCard:hover~#productStars {
   color: white;
 }
 
@@ -1378,7 +1029,7 @@ button.dynamicButtonWhite:hover {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 4px none black;
   border-radius: 5px;
   padding: 20px 20px;
@@ -1539,10 +1190,12 @@ h4#tutSection {
   }
 
   .section1 .textcentered p {
-    font-size: 30px;
+    font-size: 36px;
   }
+
   .textmainheader {
     max-width: 400px;
+    font-size: 36px;
     margin: auto;
   }
 
@@ -1601,12 +1254,12 @@ label {
   background-attachment: fixed;
   background-size: cover;
   padding: 20px 20px 20px 20px;
-  
+
 }
+
 @media screen and (max-width: 800px) {
   .firstfooter {
     height: 275px;
-    
+
   }
 }
-

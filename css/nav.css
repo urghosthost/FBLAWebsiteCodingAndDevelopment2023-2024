@@ -5,6 +5,7 @@ header {
   padding: 0;
   top: 0px;
   width: 100%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*Main CSS for navbar bar */
@@ -13,8 +14,10 @@ header {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  border-bottom: 1px solid black;
-  background-color: #242322;
+}
+#navbar {
+  background-color: rgba(36,35,34, 1);
+  transition: background-color 0.5s;
 }
 
 .navbar li {
@@ -24,24 +27,29 @@ header {
 
 #navbutton {
   display: block;
-  font-weight: 500;
-  font-size: 18px;
-  width: 130px;
+  font-weight: 300;
+  font-size: 20px;
+  width: 115px;
   color: white;
   text-align: center;
-  padding: 28px 0px ;
+  padding: 20px 0px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   text-decoration: none;
   border: 1px hidden red;
-  border-radius: 2px;
-  
+  border-radius: 5px;
+  opacity: 1;
+
 }
 
 #navlogo {
-  margin-top: 5px;
+  padding: 3px;
+  border-radius: 5px;
   display: block;
   color: #666;
   text-align: center;
   text-decoration: none;
+  opacity: 1;
 }
 
 .navbar ul.scrolled {
@@ -52,20 +60,23 @@ header {
 /*Main CSS for navbar buttons when not active */
 .navbar li a:hover:not(.active) {
   background-color: black;
-  transition: background-color 0.5s;
+  box-shadow: 0 8px 16px 0 rgba(61, 61, 61, 0.2), 0 6px 20px 0 rgba(61, 61, 61, 0.19);
   font-weight: 300px;
+  transition: background-color 0.5s, box-shadow 0.5s;
 }
 
 /*Main CSS for navbar buttons when active */
 #navbar a.active {
   color: white;
+  border-radius: 5px;
   background-color: #b50202;
 }
 
 /*Main CSS for navbar buttons when hover and active */
 #navbar a.active:hover {
   background-color: #de1600;
-  transition: background-color 0.5s;
+  box-shadow: 0 8px 16px 0 rgba(61, 61, 61, 0.2), 0 6px 20px 0 rgba(61, 61, 61, 0.19);
+  transition: background-color 0.5s, box-shadow 0.5s;
 }
 
 /*CSS for navbar buttons for alignment*/
