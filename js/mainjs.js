@@ -21,10 +21,12 @@ function scrollFunction() {
   
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("navbar").style.backgroundColor = 'rgba(36,35,34, 0.75)';
+    document.getElementById("mobilenav").style.backgroundColor = 'rgba(36,35,34, 0.75)';
     
   } else {
     
     document.getElementById("navbar").style.backgroundColor = 'rgba(36,35,34, 1)';
+    document.getElementById("mobilenav").style.backgroundColor = 'rgba(36,35,34, 1)';
   }
 }
 
@@ -174,13 +176,12 @@ function section(
   buttonM.style.display = "inline-block";
   buttonM.style.float = "center";
   switch (fontColor) {
-    case "white":
+    case 0:
       paragraphM.style.color = "white";
       h1M.style.color = "white";
       buttonM.className = "dynamicButtonWhite";
-
       break;
-    case "black":
+    case 1:
       paragraphM.style.color = "black";
       h1M.style.color = "black";
       buttonM.className = "dynamicButtonBlack";
@@ -242,10 +243,10 @@ function section(
       break;
     //Appends all the different sections into their respective areas, sets the main div class name and changes the append order for if the image is wanted on the right side of the section. Also appends the mobileDiv, basically making all the sections look the same on mobile (left aligned/image on top of paragraph)
     case "right":
-      tableSection.setAttribute("id", "desktoplayoutsection");
-      tableSectionM.setAttribute("id", "mobilelayoutsection");
-      mainDiv.classList.add("howtosection", "animate__animation");
-      mobileDiv.classList.add("howtosection", "animate__animation");
+      tableSection.setAttribute("id", "desktoplayoutsection", 'animate__animated');
+      tableSectionM.setAttribute("id", "mobilelayoutsection", 'animate__animated');
+      mainDiv.classList.add("howtosection");
+      mobileDiv.classList.add("howtosection");
 
       tableData1.appendChild(image);
       tableData2.appendChild(h1);
