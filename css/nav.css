@@ -19,6 +19,8 @@ header {
   background-color: rgba(36,35,34, 1);
   transition: background-color 0.5s;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  will-change: transform;
 }
 
 .navbar li {
@@ -26,6 +28,7 @@ header {
   padding: 5px;
 }
 
+/* CSS for navigation bar button */
 #navbutton {
   display: block;
   font-weight: 300;
@@ -43,6 +46,7 @@ header {
 
 }
 
+/* CSS for Navigation bar logo*/
 #navlogo {
   padding: 3px;
   border-radius: 5px;
@@ -59,9 +63,11 @@ header {
 }
 
 /*Main CSS for navbar buttons when not active */
-.navbar li a:hover:not(.active) {
-  background-color: black;
+#navbar li a:hover:not(.active) {
+  background-color: rgba(0,0,0,0.3);
   box-shadow: 0 8px 16px 0 rgba(61, 61, 61, 0.2), 0 6px 20px 0 rgba(61, 61, 61, 0.19);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   font-weight: 300px;
   transition: background-color 0.5s, box-shadow 0.5s;
 }
@@ -70,12 +76,14 @@ header {
 #navbar a.active {
   color: white;
   border-radius: 5px;
-  background-color: #b50202;
+  background-color: rgba(181,2,2,0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8x);
 }
 
 /*Main CSS for navbar buttons when hover and active */
 #navbar a.active:hover {
-  background-color: #de1600;
+  background-color: rgba(255, 25, 0, 0.6);
   box-shadow: 0 8px 16px 0 rgba(61, 61, 61, 0.2), 0 6px 20px 0 rgba(61, 61, 61, 0.19);
   transition: background-color 0.5s, box-shadow 0.5s;
 }
@@ -86,11 +94,10 @@ header {
   color: black;
 }
 
-/*Main CSS Mobile Navbar CSS*/
+/*Mobile Navbar Class CSS*/
 .mobilenav {
   overflow: hidden;
   display: none;
-  background-color: #242322;
   color: black;
   font-size: 15px;
   text-align: center;
@@ -99,6 +106,12 @@ header {
   position: sticky;
   top: 0px;
   width: 100%;
+}
+/*Mobile Navbar ID CSS*/
+#mobilenav {
+  background-color: rgba(36,35,34, 1);
+  transition: background-color 0.5s;
+  backdrop-filter: blur(8px);
 }
 
 /*Main CSS Mobile Navbar CSS for buttons to be hidden on default*/

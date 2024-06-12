@@ -99,6 +99,7 @@ input[type='file'] {
   padding-right: 10px;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   width: 33.33333333%;
   margin-left: 33.3333333%;
   margin-right: 33.33333%;
@@ -210,20 +211,21 @@ button.dynamicButtonWhite:hover {
 
 /* Desktop main CSS for category/listing buttons */
 .categorybutton {
-  background-color: #ff7420;
+  background-color: #a8022b;
   margin: 0% 16.67% 0% 16.67%;
   padding: 25px 35px 10px 35px;
   width: 125px;
   height: 125px;
+  font-size:20px;
   text-align: center;
-  color: black;
+  color: white;
   border: gray rounded 2 px;
   border-radius: 5px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .categorybutton:hover {
-  background-color: #f98a45;
+  background-color: #800020;
   transition: background-color 0.5s;
   cursor: pointer;
 }
@@ -302,10 +304,10 @@ button.dynamicButtonWhite:hover {
 .howtosection {
   border: black none 4px;
   border-radius: 5px;
-  color: black;
+  color: white;
   margin-top: 50px;
   text-align: center;
-  background-color: #ffb11e;
+  background-color: #b50202;
   width: 95%;
   margin-left: 2.5%;
   margin-right: 2.5%;
@@ -313,7 +315,7 @@ button.dynamicButtonWhite:hover {
 }
 
 .sectiontext {
-  max-width: 500px;
+  max-width: 450px;
   text-align: left;
 }
 
@@ -757,7 +759,7 @@ button.dynamicButtonWhite:hover {
   }
 
   li.sectiontext {
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -947,7 +949,7 @@ button.dynamicButtonWhite:hover {
 }
 
 .accordion {
-  width: 80%;
+  width: 90%;
   margin: auto;
   color: black;
   margin-top: 50px;
@@ -962,20 +964,21 @@ button.dynamicButtonWhite:hover {
 .accordion .acclabel {
   position: relative;
   padding: 10px 0;
-  font-size: 30px;
+  font-size: 26px;
   color: black;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .accordionheader {
-  font-size: 36px;
+  font-size: 32px;
   text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
   .accordion .acclabel {
     font-size: 18px;
+    
   }
 }
 
@@ -984,8 +987,8 @@ button.dynamicButtonWhite:hover {
   color: black;
   position: absolute;
   top: 50%;
-  right: -5px;
-  font-size: 30px;
+  right: -10px;
+  font-size: 26px;
   transform: translateY(-50%);
 }
 
@@ -997,6 +1000,7 @@ button.dynamicButtonWhite:hover {
   font-size: 24px;
   text-align: justify;
   width: 100%;
+  font-weight: 200;
   overflow: hidden;
   transition: 0.5s;
 }
@@ -1012,7 +1016,7 @@ button.dynamicButtonWhite:hover {
 .accordion hr {
   width: 100;
   margin-left: 0;
-  border: 1px solid grey;
+  border: 1px solid black;
 }
 
 .accordion .acccontainer.accactive .acccontent {
@@ -1021,11 +1025,12 @@ button.dynamicButtonWhite:hover {
 
 .accordion .acccontainer.accactive .acclabel::before {
   content: "-";
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .applyDescription {
-  background-color: #b50202;
+  
+  background-color: #69011b;
   color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1039,7 +1044,27 @@ button.dynamicButtonWhite:hover {
   margin-top: 20px;
   margin-left: 30%;
   margin-right: 30%;
+
 }
+.applicationDescription {
+  background-color: #b50202;
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 4px none black;
+  border-radius: 5px;
+  padding: 20px 20px;
+  text-align: center;
+  height: 250px;
+  width: 40%;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+
+}
+
 
 .formsection {
   width: 50%;
@@ -1057,6 +1082,13 @@ button.dynamicButtonWhite:hover {
     margin-left: 2.5%;
     margin-right: 2.5%;
     margin-bottom: 20px;
+  }
+  .applicationDescription {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 20px;
+    height: 300px;
   }
 }
 
@@ -1132,6 +1164,7 @@ footer h3 {
 #copyrightLink {
   color: white;
   text-decoration: underline;
+  font-weight:600;
 }
 
 #copyrightLink:visited {
@@ -1258,9 +1291,23 @@ label {
 
 }
 
+/* CSS for changing size of the first footer at the bottom of the page */
+
 @media screen and (max-width: 800px) {
   .firstfooter {
     height: 275px;
 
   }
+}
+
+a.whitelink:link{
+  color: white;
+  font-weight: 600;
+}
+a.whitelink:visited{
+  color: lightgray;
+  font-weight: 600;
+}
+a.whitelink:hover{
+  color: white;
 }
