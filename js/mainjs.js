@@ -42,6 +42,8 @@ if (document.URL.includes("listings.html")) {
   txt = "FILL OUT THIS FORM TO APPLY!";
 } else if (document.URL.includes("contact.html")) {
   txt = "WANT TO SPEAK TO US DIRECTLY?";
+} else if (document.URL.includes("test.html")) {
+  txt = "TAKE OUR JOB QUIZ!";
 }
 var speed = 50; /* The speed/duration of The effect in milliseconds */
 function typeWriter() {
@@ -602,3 +604,58 @@ function SubForm() {
     });
   }
 }
+
+
+
+function submitQuiz() {
+  var total = 0;
+  var submittable = 'true';
+
+  function checkQuestion(pId){
+    var questionanswered = 'false';
+    var question = document.getElementsByName(pId);
+
+    for (i = 0; i < question.length; i++) {
+      var ques = question[i];
+      if (ques.checked) {
+        total += parseInt(ques.value,10);
+        questionanswered = 'true';
+      }
+    }
+    if(questionanswered == 'false') {
+      document.getElementById(pId).innerText  = "Please answer this question";
+      submittable = 'false';
+    }
+    else if(questionanswered == 'true'){
+      document.getElementById(pId).innerText  = "";
+      submittable = 'true';
+    }
+  }
+
+  checkQuestion('q1');
+  checkQuestion('q2');
+  checkQuestion('q3');
+  checkQuestion('q4');
+  checkQuestion('q5');
+  checkQuestion('q6');
+  checkQuestion('q7');
+  checkQuestion('q8');
+  checkQuestion('q9');
+  checkQuestion('q10');
+
+  if(submittable == 'true') {
+    if(total < 15) {
+      document.location = "testdone.html?result=floormanager";
+    }
+    else if(total < 25) {
+      document.location = "testdone.html?result=floormanager";
+    }
+    else {
+      document.location = "testdone.html?result=customerservice";
+    }
+  }
+  else {
+
+  }
+}
+
