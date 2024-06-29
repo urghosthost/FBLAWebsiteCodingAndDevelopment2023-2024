@@ -83,9 +83,10 @@
                             const queryString = window.location.search;
                             const urlParams = new URLSearchParams(queryString);
                             if (urlParams.has('option')) {
-                                const option = urlParams.get('option');
+                                const option = urlParams.get('option');  
                                 document.getElementById('job').value = option;
                             }
+                            
                         </script>
                         <h2 style="color: #ff7420;">PERSONAL INFORMATION</h2>
                         <label for="fname">
